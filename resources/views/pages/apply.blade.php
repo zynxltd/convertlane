@@ -5,7 +5,7 @@
 >
     <x-page-hero eyebrow="Apply">
         <x-slot:title>Partner <span class="text-gradient-hero">application</span></x-slot:title>
-        <x-slot:subtitle>Strict due diligence applies to every partner. Panel access only after verification — typically 5–10 business days if documents are complete.</x-slot:subtitle>
+        <x-slot:subtitle>Strict due diligence applies to every partner. Panel access only after verification.</x-slot:subtitle>
     </x-page-hero>
 
     <section class="py-16 lg:py-24">
