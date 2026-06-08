@@ -34,9 +34,6 @@
     />
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @if (request()->routeIs('home'))
-        <link rel="preload" as="image" href="{{ asset(config('brand.hero_video_poster')) }}">
-    @endif
     @stack('head')
 </head>
 <body @class([

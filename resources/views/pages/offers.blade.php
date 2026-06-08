@@ -59,7 +59,7 @@
         </section>
     @else
         @if (count($inHouseBrands) > 0)
-            <section class="border-b border-subtle-5 bg-slate-50/80 py-10 dark:bg-elevated-muted/40">
+            <section class="border-b border-subtle-5 bg-slate-50/80 py-10 dark:bg-surface-950">
                 <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <h2 class="font-display text-sm font-bold uppercase tracking-wider text-slate-500">In-house brands</h2>
                     <p class="mt-1 max-w-2xl text-sm text-muted">Programmes operated directly on ConvertLane.</p>

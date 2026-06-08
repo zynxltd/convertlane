@@ -2,11 +2,10 @@
     'eyebrow' => null,
     'showDashboard' => false,
     'showLogo' => false,
-    'heroImage' => null,
 ])
 
 <section class="page-hero relative z-0 min-h-[22rem] overflow-hidden border-b-0 pb-14 pt-24 sm:min-h-[26rem] sm:pb-16 sm:pt-28 lg:min-h-[28rem] lg:pb-20 lg:pt-32">
-    <x-hero-video variant="cinematic" :priority="request()->routeIs('home')" :image="$heroImage" />
+    <x-hero-media />
 
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="hero-content-readable mx-auto grid max-w-3xl items-center gap-8 text-center lg:max-w-4xl">
@@ -53,3 +52,7 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+    @vite('resources/js/hero-video.js')
+@endpush

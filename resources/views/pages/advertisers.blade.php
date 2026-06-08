@@ -11,7 +11,7 @@
         </x-slot:actions>
     </x-page-hero>
 
-    <section class="border-y border-subtle-5 bg-slate-100/60 py-16 dark:bg-elevated-muted/60 lg:py-20">
+    <section class="border-y border-subtle-5 bg-slate-100/60 py-16 dark:bg-surface-950 lg:py-20">
         <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <p class="eyebrow mx-auto">Advertiser programme</p>
             <h2 class="section-heading mt-4">Quality over quantity</h2>

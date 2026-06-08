@@ -545,12 +545,17 @@
             radial-gradient(ellipse 120% 100% at 50% 100%, rgb(0 0 0 / 0.55), transparent 55%);
     }
 
-    .home-hero .hero-media {
+    .home-hero .hero-media,
+    .page-hero .hero-media {
         position: absolute;
         inset: 0;
         z-index: 0;
         overflow: hidden;
         background: #050a14;
+    }
+
+    .page-hero .hero-media-progress {
+        display: none;
     }
 
     .hero-video,
