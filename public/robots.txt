@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /compliance/
+Disallow: /partner/login
+Disallow: /advertiser/login
+
+Sitemap: https://convertlane.co.uk/sitemap.xml

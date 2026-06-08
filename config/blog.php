@@ -1,0 +1,45 @@
+<?php
+
+return [
+    'posts' => [
+        [
+            'slug' => 'affiliate-network-vs-in-house-program',
+            'title' => 'Affiliate Network vs In-House Program: Which Scales Faster?',
+            'meta_title' => 'Affiliate Network vs In-House Program: Scale Faster',
+            'excerpt' => 'Compare time-to-market, publisher reach, fraud controls, and operational overhead when choosing a network partner versus building an in-house affiliate programme.',
+            'published_at' => '2026-05-10',
+            'author' => 'ConvertLane Team',
+            'category' => 'Strategy',
+            'reading_time' => 12,
+            'image' => '/images/blog/strategy-network.jpg',
+            'image_alt' => 'Affiliate managers in a strategy meeting reviewing network growth plans',
+            'keywords' => 'affiliate network, in-house affiliate program, performance marketing, publisher recruitment, ConvertLane',
+        ],
+        [
+            'slug' => 'cpa-vs-cps-offer-models',
+            'title' => 'CPA vs CPS: Choosing the Right Payout Model for Your Funnel',
+            'meta_title' => 'CPA vs CPS Payout Models: Which Fits Your Funnel?',
+            'excerpt' => 'Learn how CPA and CPS payout models affect publisher motivation, advertiser cash flow, incrementality testing, and long-term customer lifetime value.',
+            'published_at' => '2026-04-22',
+            'author' => 'ConvertLane Team',
+            'category' => 'Offers',
+            'reading_time' => 11,
+            'image' => '/images/blog/offer-models.jpg',
+            'image_alt' => 'Point-of-sale checkout representing CPA and CPS conversion payout models',
+            'keywords' => 'CPA, CPS, payout model, affiliate offers, cost per action, cost per sale, performance marketing',
+        ],
+        [
+            'slug' => 'affiliate-compliance-checklist-2026',
+            'title' => 'Affiliate Compliance Checklist for 2026',
+            'meta_title' => 'Affiliate Compliance Checklist 2026 (UK & EU)',
+            'excerpt' => 'A practical 2026 compliance checklist covering GDPR, FTC and ASA disclosures, brand bidding, pre-landers, fraud monitoring, and network enforcement policies.',
+            'published_at' => '2026-03-15',
+            'author' => 'ConvertLane Team',
+            'category' => 'Compliance',
+            'reading_time' => 13,
+            'image' => '/images/blog/compliance.jpg',
+            'image_alt' => 'Legal and compliance team reviewing affiliate marketing policies',
+            'keywords' => 'affiliate compliance, GDPR, ASA disclosure, FTC guidelines, publisher compliance checklist 2026',
+        ],
+    ],
+];
