@@ -37,7 +37,7 @@
             </x-slot:meta>
         @else
             <x-slot:subtitle>
-                We are onboarding advertisers now. Apply as a publisher to be notified when programmes go live, or contact us if you are an advertiser.
+                Live programmes are available to approved network partners. Join ConvertLane to browse offers and request tracking links.
             </x-slot:subtitle>
         @endif
     </x-page-hero>
@@ -46,13 +46,13 @@
         <section class="py-16 lg:py-24">
             <div class="mx-auto max-w-xl px-4 text-center sm:px-6">
                 <div class="rounded-2xl border border-subtle bg-elevated p-10 shadow-lg">
-                    <p class="font-display text-xl font-semibold text-heading">No public offers yet</p>
+                    <p class="eyebrow mx-auto">Members only</p>
+                    <p class="mt-4 font-display text-2xl font-semibold text-heading">Join the network to see live offers</p>
                     <p class="mt-3 text-sm text-muted leading-relaxed">
-                        New programmes will appear here once advertisers are approved and published. Every offer is set up from a signed IO — not a self-serve catalogue.
+                        The full catalogue is visible once your partner application is approved. Every programme is configured from a signed IO — not a public self-serve list.
                     </p>
-                    <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-                        <a href="{{ route('apply') }}?type=publisher" class="btn-primary">Apply as publisher</a>
-                        <a href="{{ route('contact') }}" class="btn-secondary">Advertiser enquiry</a>
+                    <div class="mt-8 flex justify-center">
+                        <a href="{{ route('apply') }}" class="btn-primary">Join Network</a>
                     </div>
                 </div>
             </div>
@@ -173,9 +173,17 @@
         </section>
     @endif
 
-    <x-cta-banner
-        heading="Want access when offers go live?"
-        sub="Approved publishers receive tracking links and a named account manager. Reference an offer ID in your application if you have one."
-        primaryLabel="Apply as publisher"
-    />
+    @if (! $hasOffers)
+        <x-cta-banner
+            heading="Ready to browse live programmes?"
+            sub="Approved partners get full catalogue access, tracking links, and a named account manager."
+            primaryLabel="Join Network"
+        />
+    @else
+        <x-cta-banner
+            heading="Want access when offers go live?"
+            sub="Approved publishers receive tracking links and a named account manager. Reference an offer ID in your application if you have one."
+            primaryLabel="Apply as publisher"
+        />
+    @endif
 </x-layouts.app>

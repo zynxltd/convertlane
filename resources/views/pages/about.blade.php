@@ -5,18 +5,18 @@
         </x-slot:title>
         <x-slot:subtitle>{{ config('brand.origin') }}</x-slot:subtitle>
         <x-slot:meta>
-            <dl class="flex flex-wrap gap-8 text-sm">
+            <dl>
                 <div>
-                    <dt class="text-slate-500">Legal entity</dt>
-                    <dd class="mt-1 font-medium text-slate-900 dark:text-white">{{ config('brand.legal_name') }}</dd>
+                    <dt>Legal entity</dt>
+                    <dd>{{ config('brand.legal_name') }}</dd>
                 </div>
                 <div>
-                    <dt class="text-slate-500">Registered</dt>
-                    <dd class="mt-1 font-medium text-slate-900 dark:text-white">{{ config('brand.registered') }}</dd>
+                    <dt>Registered</dt>
+                    <dd>{{ config('brand.registered') }}</dd>
                 </div>
                 <div>
-                    <dt class="text-slate-500">Based in</dt>
-                    <dd class="mt-1 font-medium text-slate-900 dark:text-white">United Kingdom</dd>
+                    <dt>Based in</dt>
+                    <dd>United Kingdom</dd>
                 </div>
             </dl>
         </x-slot:meta>

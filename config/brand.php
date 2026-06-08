@@ -8,7 +8,7 @@ return [
     'legal_name' => 'ConvertLane Ltd',
     'tagline' => 'Scale What Converts',
     'descriptor' => 'Performance affiliate network',
-    'signature' => 'Vetted partners. Clear IOs. Payouts on schedule.',
+    'signature' => 'Vetted partners. Payouts on schedule.',
     'origin' => 'We review every partner before they get tracking links — no open sign-up wall, no mystery traffic. Advertisers get quality conversions; publishers get net-30 payouts reconciled to approved stats.',
     'description' => 'ConvertLane is a performance affiliate network connecting premium advertisers with vetted publishers. CPA, CPL, CPS, and hybrid deals across finance, iGaming, health, SaaS, and e-commerce.',
 

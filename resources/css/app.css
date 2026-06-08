@@ -1086,6 +1086,39 @@
         @apply rounded-2xl border border-white/50 bg-white/55 p-6 shadow-xl shadow-slate-900/5 backdrop-blur-md sm:p-8 dark:border-white/10 dark:bg-slate-950/45 dark:shadow-black/30;
     }
 
+    .page-hero-header {
+        @apply mb-6 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between;
+    }
+
+    .page-hero-header .eyebrow {
+        @apply shrink-0;
+    }
+
+    .page-hero-meta {
+        @apply mt-8 border-t border-slate-200/70 pt-6 dark:border-white/10;
+    }
+
+    .page-hero-meta dl {
+        @apply grid grid-cols-1 gap-6 text-center text-sm sm:grid-cols-3 sm:gap-4;
+    }
+
+    .page-hero-meta dt {
+        @apply text-xs font-medium uppercase tracking-wider text-slate-500 dark:text-slate-400;
+    }
+
+    .page-hero-meta dd {
+        @apply mt-1 font-medium text-slate-900 dark:text-white;
+    }
+
+    .page-hero-actions {
+        @apply mt-10 flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4;
+    }
+
+    .page-hero-actions .btn-primary,
+    .page-hero-actions .btn-secondary {
+        @apply w-full sm:w-auto;
+    }
+
     .page-hero .hero-content-readable h1,
     .page-hero .hero-content-readable p,
     .page-hero .hero-content-readable .eyebrow {
