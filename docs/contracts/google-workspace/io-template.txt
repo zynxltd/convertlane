@@ -1,0 +1,139 @@
+INSERTION ORDER (IO)
+
+ConvertLane Ltd · convertlane.co.uk
+DRAFT — customise per offer. Solicitor review for regulated finance offers.
+
+
+HEADER
+
+IO number:          CL-IO-2026-___________
+Date:               _______________________
+Effective date:     _______________________
+Expiry / review:    _______________________  (or “Until terminated”)
+
+
+PARTIES
+
+Network:            ConvertLane Ltd, United Kingdom
+Partner:            _________________________________________________
+Address:            _________________________________________________
+Company reg no.:    _________________________________________________
+
+Partner type:       ☐ Affiliate / Publisher    ☐ Advertiser
+
+Master agreement:   CL-PUB-___________  or  CL-ADV-___________
+
+
+OFFER DETAILS
+
+Offer name:         _________________________________________________
+Offer18 offer ID:   _________________________________________________
+Vertical:           ☐ Loans   ☐ Credit card   ☐ Credit score / monitoring
+                    ☐ Personal finance   ☐ Other: ___________________
+Advertiser:         _________________________________________________
+                    (affiliate IO only)
+Landing URL(s):     _________________________________________________
+Preview / test link: ________________________________________________
+
+
+COMMERCIAL TERMS
+
+Model:              ☐ CPA   ☐ CPL   ☐ CPS   ☐ Hybrid
+Payable event:      _________________________________________________
+                    (e.g. Funded loan, Approved application, SOI, Sale)
+Payout to affiliate: £ / $ __________ per event
+Network fee:        __________ % or £__________ flat (advertiser IO only)
+Currency:           ☐ GBP   ☐ USD   ☐ EUR
+Cookie / attribution window: __________ days
+Reversal window:    __________ days (chargebacks / clawbacks)
+
+
+CAPS & VOLUME
+
+Daily conversions:      _____________________________________________
+Monthly conversions:    _____________________________________________
+Monthly spend:          £____________________________________________
+                        (advertiser)
+Cap behaviour:          Hard — auto-pause at 100% in Offer18
+
+
+TARGETING
+
+Allowed geos:       _________________________________________________
+                    (e.g. UK only)
+Excluded geos:      _________________________________________________
+Allowed traffic:    _________________________________________________
+                    (e.g. SEO, Native, Paid social, Email opt-in, Content)
+Prohibited traffic: _________________________________________________
+                    (Incent, Brand bidding, Adult, Bot, SMS unless approved)
+Brand bidding:      ☐ Prohibited   ☐ Allowed — terms: _______________
+
+
+FINANCE COMPLIANCE
+(complete for loans, credit cards, credit score, personal finance)
+
+FCA / credit broking status:    ☐ Yes — ref: _________________________
+Representative APR / warnings:  ☐ Verified on landing page
+No guaranteed approval in copy: ☐ Agreed
+Pre-lander approval required:   ☐ Yes   ☐ No
+Claims restrictions:            _____________________________________
+                                (e.g. No “guaranteed loan”, no misleading savings)
+
+
+TRACKING & REPORTING
+
+Postback / pixel URL:   _____________________________________________
+Test procedure:         1 test click → 1 test conversion → confirm in Offer18
+Reporting:              Offer18 dashboard + email on request
+Validation SLA:         Advertiser validates within __________ days
+
+
+PAYMENT TERMS — AFFILIATE / PUBLISHER
+(complete if partner type is Affiliate)
+
+Payment cycle:          Net-30
+Pay date:               15th for prior calendar month
+Minimum threshold:      £100 / $100
+Method:                 Bank transfer / Wise — details on file
+Deductions:             Invalid conversions, chargebacks per master agreement
+
+
+PAYMENT TERMS — ADVERTISER
+(complete if partner type is Advertiser)
+
+Billing:                ☐ Prepay £__________ received — ref: __________
+                        ☐ Credit line £__________ — Net-15 / Net-30
+Invoice contact:        _____________________________________________
+
+
+SPECIAL TERMS
+
+_____________________________________________________________________
+_____________________________________________________________________
+(Exclusivity, private offer, probation cap for new affiliates, etc.)
+
+
+SIGNATURES
+
+By signing, both parties agree this IO is binding and incorporated into the master agreement.
+
+ConvertLane Ltd
+Signature:  _________________________
+Name:       _________________________
+Title:      _________________________
+Date:       _________________________
+
+Partner
+Signature:  _________________________
+Name:       _________________________
+Title:      _________________________
+Date:       _________________________
+
+
+— — — INTERNAL ONLY — DELETE BEFORE SENDING TO PARTNER — — —
+
+☐ DD approved in compliance portal
+☐ Prepay received (advertiser)
+☐ Master agreement signed
+☐ Offer18 offer created + caps set
+☐ Test conversion completed

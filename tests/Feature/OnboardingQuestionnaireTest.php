@@ -40,7 +40,7 @@ class OnboardingQuestionnaireTest extends TestCase
             'traffic_sources' => 'SEO and paid social.',
             'promo_channels' => 'https://example.com',
             'confirm_id_required' => '1',
-        ])->assertRedirect(route('onboarding.publisher', [
+        ])->assertRedirect(route('onboarding.publisher.agreement', [
             'email' => 'publisher@example.com',
             'ref' => 'DD-P-00001',
         ]));
@@ -68,7 +68,7 @@ class OnboardingQuestionnaireTest extends TestCase
             'landing_pages' => 'https://example.com/lp',
             'postback_url' => 'https://postback.example.com/?cid={clickid}',
             'confirm_id_required' => '1',
-        ])->assertRedirect(route('onboarding.advertiser', [
+        ])->assertRedirect(route('onboarding.advertiser.agreement', [
             'email' => 'advertiser@example.com',
             'ref' => 'DD-A-00002',
         ]));
@@ -217,7 +217,7 @@ class OnboardingQuestionnaireTest extends TestCase
             'traffic_sources' => 'SEO and paid social.',
             'promo_channels' => 'https://example.com',
             'confirm_id_required' => '1',
-        ])->assertRedirect(route('onboarding.publisher', [
+        ])->assertRedirect(route('onboarding.publisher.agreement', [
             'email' => 'publisher@example.com',
             'ref' => 'DD-P-00004',
         ]));

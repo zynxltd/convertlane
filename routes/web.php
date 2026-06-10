@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\OfferController as AdminOfferController;
 use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AdvertiserEnquiryController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OnboardingAgreementController;
 use App\Http\Controllers\OnboardingController;
 use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\OffersController;
@@ -33,8 +34,13 @@ Route::get('/apply/success', [ApplicationController::class, 'success'])->name('a
 
 Route::get('/onboarding/publisher', [OnboardingController::class, 'createPublisher'])->name('onboarding.publisher');
 Route::post('/onboarding/publisher', [OnboardingController::class, 'storePublisher'])->name('onboarding.publisher.store');
+Route::get('/onboarding/publisher/agreement', [OnboardingAgreementController::class, 'createPublisher'])->name('onboarding.publisher.agreement');
+Route::post('/onboarding/publisher/agreement', [OnboardingAgreementController::class, 'storePublisher'])->name('onboarding.publisher.agreement.store');
 Route::get('/onboarding/advertiser', [OnboardingController::class, 'createAdvertiser'])->name('onboarding.advertiser');
 Route::post('/onboarding/advertiser', [OnboardingController::class, 'storeAdvertiser'])->name('onboarding.advertiser.store');
+Route::get('/onboarding/advertiser/agreement', [OnboardingAgreementController::class, 'createAdvertiser'])->name('onboarding.advertiser.agreement');
+Route::post('/onboarding/advertiser/agreement', [OnboardingAgreementController::class, 'storeAdvertiser'])->name('onboarding.advertiser.agreement.store');
+Route::get('/onboarding/complete', [OnboardingAgreementController::class, 'success'])->name('onboarding.agreement.success');
 
 Route::redirect('/login', '/partner/login');
 

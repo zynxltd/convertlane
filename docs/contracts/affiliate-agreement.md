@@ -1,0 +1,146 @@
+# Affiliate / Publisher Agreement
+
+**ConvertLane Ltd** · convertlane.co.uk  
+**DRAFT — have a UK solicitor review before first live partner.**
+
+---
+
+## Parties
+
+**Network:** ConvertLane Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
+**Affiliate:** _________________________________________________  
+**Address:** _________________________________________________  
+**Company no.:** _________________________________________________  
+(“**Affiliate**”, “**Publisher**”, “**you**”)
+
+**Effective date:** _______________  
+**Agreement ID:** CL-PUB-_______________
+
+---
+
+## 1. Appointment
+
+1.1 ConvertLane operates a performance marketing network. Upon approval, we appoint you on a **non-exclusive** basis to promote **approved offers** assigned to you in the Offer18 partner panel (`convertlane.offer18.com`) or by separate written IO.
+
+1.2 This Agreement and each signed **Insertion Order (IO)** form the contract. If an IO conflicts with this Agreement, the **IO prevails** for that offer.
+
+1.3 You receive **no tracking links** until ConvertLane confirms your status as **approved** in writing.
+
+---
+
+## 2. Your obligations
+
+You will:
+
+- (a) Promote only with **approved links, creatives, and landing pages**;
+- (b) Comply with all applicable laws (UK advertising standards, ASA/CAP, consumer credit advertising rules where relevant, privacy/GDPR);
+- (c) Display clear **affiliate disclosures** on all promotional content;
+- (d) Use **opt-in email only** where email traffic is permitted on the IO;
+- (e) **Not** use prohibited traffic (incent, brand bidding, bots, cookie stuffing, etc.) unless the IO explicitly allows;
+- (f) **Not** rebroker, sublicense, or resell your tracking links without written consent;
+- (g) Provide accurate company, tax, and payment information;
+- (h) Notify us within **24 hours** of any fraud suspicion or security incident affecting traffic;
+- (i) Cooperate with compliance and quality audits on request.
+
+Traffic rules summary provided on approval. Finance offers require extra care: no misleading claims, no guaranteed approval language, no targeting minors.
+
+---
+
+## 3. Compliance & KYC
+
+3.1 You completed our due diligence pack truthfully. Notify us within **5 business days** of any change in directors, beneficial owners (≥25%), registered address, or bank/payment details.
+
+3.2 We may re-screen sanctions/PEP at any time. We may suspend or terminate immediately for false or incomplete information.
+
+3.3 DD documents are stored securely by ConvertLane (Google Workspace shared drive). Do not send identity documents by unencrypted email.
+
+---
+
+## 4. Compensation
+
+4.1 Payout per IO (CPA, CPL, CPS, or hybrid).
+
+4.2 **Default payment terms** (unless IO states otherwise):
+
+| Term | Detail |
+|------|--------|
+| Cycle | Net-30 |
+| Pay date | 15th of month for prior calendar month |
+| Threshold | £100 / $100 equivalent |
+| Method | Bank transfer (UK) or Wise — details on file |
+
+4.3 We pay **approved conversions** only, per Offer18 reporting and advertiser validation. We may **deduct** invalid conversions, chargebacks, duplicate leads, and prior overpayments.
+
+4.4 You are responsible for your own taxes. We may require tax forms before first payout.
+
+4.5 We pay you only from funds properly allocated to your approved conversions. We are not liable for advertiser non-payment beyond that obligation.
+
+---
+
+## 5. Confidentiality
+
+Offer rates, caps, advertiser identities (where marked private), and unpublished IO terms are **confidential**. Do not discuss on public forums (including BlackHatWorld, AffiliateFix, etc.) without our written consent.
+
+---
+
+## 6. Intellectual property
+
+Advertisers grant rights to use creatives only for promotion during the term. You grant us a licence to use your company name and logo in partner lists with prior consent.
+
+---
+
+## 7. Term & termination
+
+7.1 Continues until terminated.
+
+7.2 Either party: **7 days’ written notice** for convenience.
+
+7.3 We may terminate **immediately** for material breach, fraud, policy violation, or regulatory risk.
+
+7.4 On termination: links deactivated in Offer18; final payout per policy for approved conversions recorded before cut-off.
+
+---
+
+## 8. Indemnity
+
+You indemnify ConvertLane against claims arising from your traffic, creatives, data practices, or breach of law — except where caused by our gross negligence.
+
+---
+
+## 9. Liability
+
+9.1 Neither party is liable for indirect or consequential loss.
+
+9.2 Our total liability is capped at **fees paid to you in the 3 months** before the claim (except fraud or death/personal injury).
+
+---
+
+## 10. General
+
+| Item | Detail |
+|------|--------|
+| Governing law | England and Wales |
+| Courts | England and Wales |
+| Assignment | Not without consent (we may assign to a group company) |
+| Notices | partners@convertlane.co.uk and your registered email |
+| Entire agreement | Yes — supersedes prior discussions |
+| Amendments | Written and signed |
+
+---
+
+## Signatures
+
+**ConvertLane Ltd**  
+Name: _________________________  
+Title: _________________________  
+Date: _________________________
+
+**Affiliate / Publisher**  
+Name: _________________________  
+Title: _________________________  
+Date: _________________________
+
+---
+
+*Schedule A: Insertion Order — see `insertion-order-template.md`*  
+*Schedule B: Payout summary — Net-30, paid 15th, £100/$100 threshold*

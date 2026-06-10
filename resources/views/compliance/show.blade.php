@@ -48,6 +48,24 @@
                 </div>
             </div>
 
+            @if ($review->partnerAgreement)
+                <div class="mt-6 glass rounded-2xl p-6 text-sm text-body">
+                    <h2 class="font-semibold text-heading">Digital agreement</h2>
+                    <div class="mt-3 grid gap-2 sm:grid-cols-2">
+                        <p><span class="text-slate-500">Signed by:</span> {{ $review->partnerAgreement->signer_name }}{{ $review->partnerAgreement->signer_title ? ' · '.$review->partnerAgreement->signer_title : '' }}</p>
+                        <p><span class="text-slate-500">Submitted:</span> {{ $review->partnerAgreement->submitted_at->format('d M Y H:i') }}</p>
+                        @if ($review->partnerAgreement->billing_model)
+                            <p><span class="text-slate-500">Billing:</span> {{ ucfirst($review->partnerAgreement->billing_model) }}</p>
+                        @endif
+                        <p><span class="text-slate-500">IP:</span> {{ $review->partnerAgreement->signed_ip ?? '—' }}</p>
+                    </div>
+                    <details class="mt-4" open>
+                        <summary class="cursor-pointer text-brand-400">View signed agreement</summary>
+                        <div class="agreement-panel legal-prose mt-3 max-w-none">{!! $review->partnerAgreement->agreement_body !!}</div>
+                    </details>
+                </div>
+            @endif
+
             @if ($review->internal_notes)
                 <div class="mt-6 glass rounded-2xl p-6 text-sm text-body">
                     <h2 class="font-semibold text-heading">Internal notes</h2>

@@ -12,13 +12,18 @@
 
     <section class="py-16 lg:py-24">
         <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-6 flex flex-wrap gap-2 text-xs font-medium text-muted">
+                <span class="rounded-full bg-elevated-muted px-3 py-1">1 Apply</span>
+                <span class="rounded-full bg-brand-500/20 px-3 py-1 text-brand-700 dark:text-brand-300">2 Questionnaire</span>
+                <span class="rounded-full bg-elevated-muted px-3 py-1">3 Agreement</span>
+            </div>
             <div class="glass rounded-2xl p-8">
                 <x-flash-alerts class="mb-5" :showSuccess="false" :showError="false" :showValidation="true" />
 
-                @if (session('success'))
+                @if ($questionnaireComplete ?? false)
                     <div class="space-y-4 text-sm text-muted">
-                        <p>We’ll review your answers and follow up with the due diligence document request. You don’t need to submit this form again.</p>
-                        <a href="{{ route('home') }}" class="btn-secondary inline-flex">Back to site</a>
+                        <p>Your questionnaire is on file. Continue to review and sign your agreement.</p>
+                        <a href="{{ route('onboarding.advertiser.agreement', ['email' => request('email', $prefill['contact_email'] ?? ''), 'ref' => request('ref', $prefill['partner_reference'] ?? '')]) }}" class="btn-primary inline-flex">Continue to agreement</a>
                     </div>
                 @else
                     <form

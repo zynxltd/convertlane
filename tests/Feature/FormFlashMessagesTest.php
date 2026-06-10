@@ -31,9 +31,25 @@ class FormFlashMessagesTest extends TestCase
             ->assertSee('DD-P-00001', false);
     }
 
-    public function test_onboarding_success_shows_message_and_hides_form(): void
+    public function test_onboarding_success_redirects_to_agreement_step(): void
     {
         Mail::fake();
+
+        $application = Application::create([
+            'type' => 'publisher',
+            'first_name' => 'Jane',
+            'last_name' => 'Publisher',
+            'email' => 'publisher@example.com',
+            'company' => 'Example Media Ltd',
+            'partner_reference' => 'DD-P-00001',
+            'dd_status' => 'applied',
+        ]);
+
+        $application->dueDiligenceReview()->create([
+            'partner_reference' => 'DD-P-00001',
+            'type' => 'publisher',
+            'status' => 'applied',
+        ]);
 
         $response = $this->post(route('onboarding.publisher.store'), [
             'partner_reference' => 'DD-P-00001',
@@ -47,7 +63,7 @@ class FormFlashMessagesTest extends TestCase
             'confirm_id_required' => '1',
         ]);
 
-        $response->assertRedirect(route('onboarding.publisher', [
+        $response->assertRedirect(route('onboarding.publisher.agreement', [
             'email' => 'publisher@example.com',
             'ref' => 'DD-P-00001',
         ]));
@@ -55,8 +71,8 @@ class FormFlashMessagesTest extends TestCase
 
         $this->followRedirects($response)
             ->assertOk()
-            ->assertSee('review your answers', false)
-            ->assertDontSee('Submit questionnaire', false);
+            ->assertSee('Confirm your details', false)
+            ->assertSee('Continue to agreement', false);
     }
 
     public function test_onboarding_validation_shows_error_summary(): void
@@ -113,7 +129,7 @@ class FormFlashMessagesTest extends TestCase
                 'confirm_id_required' => '1',
             ]);
 
-        $response->assertRedirect(route('onboarding.publisher', [
+        $response->assertRedirect(route('onboarding.publisher.agreement', [
             'email' => 'publisher@example.com',
             'ref' => 'DD-P-00001',
         ]))
@@ -122,7 +138,7 @@ class FormFlashMessagesTest extends TestCase
 
         $this->followRedirects($response)
             ->assertOk()
-            ->assertSee('review your answers', false)
+            ->assertSee('Submit for approval', false)
             ->assertDontSee('could not submit your questionnaire', false);
     }
 

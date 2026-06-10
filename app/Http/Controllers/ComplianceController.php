@@ -27,7 +27,7 @@ class ComplianceController extends Controller
 
     public function show(DueDiligenceReview $review): View
     {
-        $review->load(['application', 'auditLogs' => fn ($q) => $q->latest()]);
+        $review->load(['application', 'partnerAgreement', 'auditLogs' => fn ($q) => $q->latest()]);
 
         return view('compliance.show', [
             'review' => $review,

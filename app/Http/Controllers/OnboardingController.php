@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreOnboardingQuestionnaireRequest;
 use App\Mail\OnboardingQuestionnaireMail;
 use App\Services\OnboardingQuestionnaireService;
+use App\Services\PartnerAgreementService;
 use App\Support\BrandContact;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
@@ -13,12 +14,12 @@ use Illuminate\View\View;
 
 class OnboardingController extends Controller
 {
-    public function createPublisher(): View
+    public function createPublisher(): View|RedirectResponse
     {
         return $this->create('publisher');
     }
 
-    public function createAdvertiser(): View
+    public function createAdvertiser(): View|RedirectResponse
     {
         return $this->create('advertiser');
     }
@@ -37,15 +38,39 @@ class OnboardingController extends Controller
         return $this->store($request, 'advertiser', $questionnaires);
     }
 
-    protected function create(string $type, ?OnboardingQuestionnaireService $questionnaires = null): View
+    protected function create(string $type, ?OnboardingQuestionnaireService $questionnaires = null): View|RedirectResponse
     {
         $email = request('email');
         $reference = request('ref');
         $questionnaires ??= app(OnboardingQuestionnaireService::class);
+        $agreements = app(PartnerAgreementService::class);
+        $dueDiligence = app(\App\Services\DueDiligenceService::class);
+
+        $prefill = $questionnaires->prefill($type, is_string($reference) ? $reference : null, is_string($email) ? $email : null);
+        $questionnaireComplete = false;
+
+        if (is_string($email) && filled($email)) {
+            $review = $dueDiligence->findReviewForQuestionnaire(
+                $type,
+                is_string($reference) ? $reference : null,
+                $email,
+            );
+
+            if ($review && $agreements->alreadySigned($review)) {
+                return redirect()
+                    ->route('onboarding.agreement.success')
+                    ->with('onboarding_agreement_type', $type)
+                    ->with('onboarding_agreement_email', $email)
+                    ->with('onboarding_agreement_reference', $review->partner_reference);
+            }
+
+            $questionnaireComplete = $review && $agreements->questionnaireCompleted($review);
+        }
 
         return view($type === 'advertiser' ? 'pages.onboarding.advertiser' : 'pages.onboarding.publisher', [
             'type' => $type,
-            'prefill' => $questionnaires->prefill($type, is_string($reference) ? $reference : null, is_string($email) ? $email : null),
+            'prefill' => $prefill,
+            'questionnaireComplete' => $questionnaireComplete,
         ]);
     }
 
@@ -82,9 +107,16 @@ class OnboardingController extends Controller
                 ->with('error', 'We could not submit your questionnaire right now. Please try again or email '.BrandContact::email().'.');
         }
 
+        $agreementRoute = $type === 'advertiser'
+            ? 'onboarding.advertiser.agreement'
+            : 'onboarding.publisher.agreement';
+
         return redirect()
-            ->route($route, ['email' => $payload['contact_email'], 'ref' => $payload['partner_reference'] ?? null])
-            ->with('success', 'Thanks — your onboarding questionnaire has been submitted. We’ll review it and follow up with the due diligence document request.');
+            ->route($agreementRoute, [
+                'email' => $payload['contact_email'],
+                'ref' => $payload['partner_reference'] ?? null,
+            ])
+            ->with('success', 'Questionnaire saved. Review your agreement below and sign to submit for approval.');
     }
 
     /**

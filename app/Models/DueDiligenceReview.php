@@ -69,6 +69,11 @@ class DueDiligenceReview extends Model
         return $this->hasMany(DueDiligenceAuditLog::class);
     }
 
+    public function partnerAgreement(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(PartnerAgreement::class);
+    }
+
     public function isApproved(): bool
     {
         return $this->status === 'approved';

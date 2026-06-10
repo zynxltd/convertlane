@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Application;
 use App\Models\DueDiligenceAuditLog;
 use App\Models\DueDiligenceReview;
+use App\Models\PartnerAgreement;
 use Illuminate\Support\Str;
 
 class DueDiligenceService
@@ -115,6 +116,51 @@ class DueDiligenceService
             $review->status,
             'Onboarding questionnaire received via web form.',
             ['partner_reference' => $review->partner_reference],
+        );
+    }
+
+    public function recordAgreementSubmission(DueDiligenceReview $review, PartnerAgreement $agreement): void
+    {
+        $snapshot = $review->checklist_snapshot ?? [];
+        $snapshot['partner_agreement'] = [
+            'agreement_id' => $agreement->id,
+            'submitted_at' => $agreement->submitted_at->toIso8601String(),
+            'signer_name' => $agreement->signer_name,
+            'billing_model' => $agreement->billing_model,
+        ];
+
+        $updates = ['checklist_snapshot' => $snapshot];
+
+        if ($review->type === 'advertiser' && filled($agreement->billing_model)) {
+            $updates['payment_terms'] = $agreement->billing_model === 'prepay'
+                ? 'Prepay — funds before caps open'
+                : 'Postpay — invoice Net-15/30 (subject to credit approval)';
+        }
+
+        $review->update($updates);
+
+        if ($review->status === 'applied') {
+            $this->transition(
+                $review,
+                'under_review',
+                'partner',
+                'Digital agreement signed — submitted for ConvertLane approval.',
+                [
+                    'agreement_id' => $agreement->id,
+                    'billing_model' => $agreement->billing_model,
+                ],
+            );
+
+            return;
+        }
+
+        $this->log(
+            $review,
+            $review->status,
+            $review->status,
+            'Digital agreement signed — submitted for ConvertLane approval.',
+            ['agreement_id' => $agreement->id],
+            'partner',
         );
     }
 
