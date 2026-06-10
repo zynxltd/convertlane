@@ -6,6 +6,18 @@
     $label = $font.' font-size: 14px; line-height: 1.5; color: #0f172a; margin: 0 0 6px;';
     $partnerLabel = ($type ?? 'publisher') === 'advertiser' ? 'Advertiser' : 'Affiliate / Publisher';
     $legalName = config('brand.legal_name');
+    $signatureSrc = $signatureImage ?? null;
+
+    if (($embedSignature ?? false) && isset($message) && filled($signatureImage)) {
+        $binary = base64_decode(
+            (string) preg_replace('#^data:image/png;base64,#', '', $signatureImage),
+            true,
+        );
+
+        if ($binary !== false) {
+            $signatureSrc = $message->embedData($binary, 'partner-signature.png', 'image/png');
+        }
+    }
 @endphp
 
 <table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="margin-top: 28px; border-top: 1px solid #e2e8f0;">
@@ -30,7 +42,9 @@
                         <p style="{{ $label }} font-weight: 700;">{{ $partnerLabel }}</p>
                         <p style="{{ $muted }} text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em;">Signature</p>
                         <p style="margin: 8px 0 12px;">
-                            <img src="{{ $signatureImage }}" alt="Signature of {{ $signerName }}" style="display: block; max-height: 80px; max-width: 100%;">
+                            @if (filled($signatureSrc))
+                            <img src="{{ $signatureSrc }}" alt="Signature of {{ $signerName }}" style="display: block; max-height: 80px; max-width: 100%;">
+                            @endif
                         </p>
                         <p style="{{ $text }}">Name: {{ $signerName }}</p>
                         @if (filled($signerTitle ?? null))

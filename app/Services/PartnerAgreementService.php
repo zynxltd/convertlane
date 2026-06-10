@@ -87,7 +87,7 @@ class PartnerAgreementService
         ])->render();
     }
 
-    public function renderSignedAgreementBodyForEmail(PartnerAgreement $agreement): string
+    public function renderAgreementBodyForEmail(PartnerAgreement $agreement): string
     {
         $agreement->loadMissing('dueDiligenceReview');
 
@@ -103,14 +103,7 @@ class PartnerAgreementService
             'questionnaire' => $questionnaire,
             'agreementId' => $this->agreementId($review),
             'signedAt' => $agreement->submitted_at,
-        ])->render()
-            .View::make('onboarding.agreements.email.signature-block', [
-                'type' => $agreement->type,
-                'signerName' => $agreement->signer_name,
-                'signerTitle' => $agreement->signer_title,
-                'signatureImage' => $agreement->signature_image,
-                'signedAt' => $agreement->submitted_at,
-            ])->render();
+        ])->render();
     }
 
     /**

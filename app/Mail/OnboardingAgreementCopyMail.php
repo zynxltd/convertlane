@@ -46,7 +46,7 @@ class OnboardingAgreementCopyMail extends Mailable
             view: 'emails.onboarding-agreement-copy',
             with: [
                 'emailAgreementBody' => app(PartnerAgreementService::class)
-                    ->renderSignedAgreementBodyForEmail($this->agreement),
+                    ->renderAgreementBodyForEmail($this->agreement),
             ],
         );
     }

@@ -138,12 +138,31 @@ class OnboardingAgreementTest extends TestCase
         ]);
 
         $html = app(\App\Services\PartnerAgreementService::class)
-            ->renderSignedAgreementBodyForEmail($agreement);
+            ->renderAgreementBodyForEmail($agreement);
 
-        $this->assertStringContainsString('<table', $html);
-        $this->assertStringContainsString(self::SIGNATURE, $html);
         $this->assertStringNotContainsString('class="mt-6', $html);
         $this->assertStringNotContainsString('Insertion Order', $html);
+    }
+
+    public function test_agreement_copy_mail_embeds_signature_image(): void
+    {
+        $review = $this->createReviewWithQuestionnaire('publisher', 'DD-P-00008');
+
+        $agreement = $review->partnerAgreement()->create([
+            'partner_reference' => 'DD-P-00008',
+            'type' => 'publisher',
+            'agreement_version' => '2026-01',
+            'questionnaire_snapshot' => $this->publisherQuestionnaire(),
+            'agreement_body' => '<p>Agreement</p>',
+            'signer_name' => 'Jane Publisher',
+            'signature_image' => self::SIGNATURE,
+            'submitted_at' => now(),
+        ]);
+
+        $html = (new OnboardingAgreementCopyMail($agreement, 'partner'))->render();
+
+        $this->assertStringContainsString('alt="Signature of Jane Publisher"', $html);
+        $this->assertMatchesRegularExpression('/<img[^>]+src=["\'](?:cid:|data:image\/png)/', $html);
     }
 
     public function test_advertiser_agreement_stores_billing_model(): void

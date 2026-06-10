@@ -25,8 +25,9 @@
                         @if ($isAdvertiser)
                             <li>If you chose <strong>prepay</strong>, we’ll send funding instructions before caps open.</li>
                             <li>If you chose <strong>postpay</strong>, our team will run a credit check before approving invoice terms.</li>
-                        @else
                             <li>Once approved, you’ll receive offer IOs and Platform access.</li>
+                        @else
+                            <li>Once approved, you’ll receive Platform access.</li>
                         @endif
                         <li>Payouts (affiliates) run Net-30 on the 15th for approved conversions.</li>
                     </ol>

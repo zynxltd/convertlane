@@ -42,14 +42,23 @@
             @elseif ($agreement->billing_model === 'postpay')
             <p style="{{ $text }}"><strong>Billing selected:</strong> Postpay — our team will confirm credit terms before traffic starts.</p>
             @endif
+            <p style="{{ $text }}">Once approved, you will receive offer IOs and Platform access.</p>
         @else
-            <p style="{{ $text }}">Once approved, you will receive offer details and Platform access.</p>
+            <p style="{{ $text }}">Once approved, you will receive Platform access.</p>
         @endif
     @endif
 
     <h2 style="{{ $section }}">Agreement copy</h2>
     <div style="padding: 20px; border: 1px solid #e2e8f0; background-color: #f8fafc;">
         {!! $emailAgreementBody !!}
+        @include('onboarding.agreements.email.signature-block', [
+            'type' => $agreement->type,
+            'signerName' => $agreement->signer_name,
+            'signerTitle' => $agreement->signer_title,
+            'signatureImage' => $agreement->signature_image,
+            'signedAt' => $agreement->submitted_at,
+            'embedSignature' => true,
+        ])
     </div>
 
     @if (! $isInternal)
