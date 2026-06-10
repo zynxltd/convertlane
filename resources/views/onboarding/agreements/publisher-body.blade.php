@@ -47,13 +47,13 @@
 <section class="mt-6 space-y-2 text-sm text-body">
     <h3 class="font-semibold text-heading">Key terms</h3>
     <ul class="list-disc space-y-1 pl-5">
-        <li>Non-exclusive appointment to promote approved offers via Offer18 (convertlane.offer18.com).</li>
+        <li>Non-exclusive appointment to promote approved offers via the ConvertLane platform.</li>
         <li>No tracking links until ConvertLane sets your status to <strong>approved</strong>.</li>
         <li>Promote only with approved links, creatives, and landing pages; comply with UK advertising and privacy law.</li>
         <li>Clear affiliate disclosures required on all promotional content.</li>
         <li>Prohibited unless IO allows: incent, brand bidding, bots, cookie stuffing, rebrokering links.</li>
         <li><strong>Payment:</strong> Net-30, paid on the 15th for the prior month; £100 / $100 threshold; bank transfer or Wise.</li>
-        <li>Pay approved conversions only, per Offer18 and advertiser validation.</li>
+        <li>Pay approved conversions only, per platform reporting and advertiser validation.</li>
         <li>Either party: 7 days’ written notice to terminate.</li>
         <li>Governing law: England and Wales.</li>
     </ul>

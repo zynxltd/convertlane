@@ -87,6 +87,32 @@ class PartnerAgreementService
         ])->render();
     }
 
+    public function renderSignedAgreementBodyForEmail(PartnerAgreement $agreement): string
+    {
+        $agreement->loadMissing('dueDiligenceReview');
+
+        $review = $agreement->dueDiligenceReview;
+        $questionnaire = $agreement->questionnaire_snapshot ?? [];
+
+        $bodyView = $agreement->type === 'advertiser'
+            ? 'onboarding.agreements.email.advertiser-body'
+            : 'onboarding.agreements.email.publisher-body';
+
+        return View::make($bodyView, [
+            'review' => $review,
+            'questionnaire' => $questionnaire,
+            'agreementId' => $this->agreementId($review),
+            'signedAt' => $agreement->submitted_at,
+        ])->render()
+            .View::make('onboarding.agreements.email.signature-block', [
+                'type' => $agreement->type,
+                'signerName' => $agreement->signer_name,
+                'signerTitle' => $agreement->signer_title,
+                'signatureImage' => $agreement->signature_image,
+                'signedAt' => $agreement->submitted_at,
+            ])->render();
+    }
+
     /**
      * @param  array<string, mixed>  $payload
      */

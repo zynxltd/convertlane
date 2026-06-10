@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\PartnerAgreement;
+use App\Services\PartnerAgreementService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -42,7 +43,11 @@ class OnboardingAgreementCopyMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'emails.onboarding-agreement-copy',
+            view: 'emails.onboarding-agreement-copy',
+            with: [
+                'emailAgreementBody' => app(PartnerAgreementService::class)
+                    ->renderSignedAgreementBodyForEmail($this->agreement),
+            ],
         );
     }
 }

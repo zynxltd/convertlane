@@ -122,6 +122,30 @@ class OnboardingAgreementTest extends TestCase
         });
     }
 
+    public function test_agreement_email_body_uses_email_safe_html(): void
+    {
+        $review = $this->createReviewWithQuestionnaire('publisher', 'DD-P-00007');
+
+        $agreement = $review->partnerAgreement()->create([
+            'partner_reference' => 'DD-P-00007',
+            'type' => 'publisher',
+            'agreement_version' => '2026-01',
+            'questionnaire_snapshot' => $this->publisherQuestionnaire(),
+            'agreement_body' => '<div class="test">web</div>',
+            'signer_name' => 'Jane Publisher',
+            'signature_image' => self::SIGNATURE,
+            'submitted_at' => now(),
+        ]);
+
+        $html = app(\App\Services\PartnerAgreementService::class)
+            ->renderSignedAgreementBodyForEmail($agreement);
+
+        $this->assertStringContainsString('<table', $html);
+        $this->assertStringContainsString(self::SIGNATURE, $html);
+        $this->assertStringNotContainsString('class="mt-6', $html);
+        $this->assertStringNotContainsString('Insertion Order', $html);
+    }
+
     public function test_advertiser_agreement_stores_billing_model(): void
     {
         $review = $this->createReviewWithQuestionnaire('advertiser', 'DD-A-00001', true);
