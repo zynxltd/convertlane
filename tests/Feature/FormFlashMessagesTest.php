@@ -68,7 +68,9 @@ class FormFlashMessagesTest extends TestCase
                 'contact_email' => 'bad',
             ]);
 
-        $response->assertRedirect(route('onboarding.publisher'))
+        $response->assertRedirect(route('onboarding.publisher', [
+            'email' => 'bad',
+        ]))
             ->assertSessionHasErrors('contact_email');
 
         $this->followRedirects($response)

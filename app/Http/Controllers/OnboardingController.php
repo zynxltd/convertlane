@@ -37,12 +37,15 @@ class OnboardingController extends Controller
         return $this->store($request, 'advertiser', $questionnaires);
     }
 
-    protected function create(string $type): View
+    protected function create(string $type, ?OnboardingQuestionnaireService $questionnaires = null): View
     {
+        $email = request('email');
+        $reference = request('ref');
+        $questionnaires ??= app(OnboardingQuestionnaireService::class);
+
         return view($type === 'advertiser' ? 'pages.onboarding.advertiser' : 'pages.onboarding.publisher', [
             'type' => $type,
-            'email' => request('email'),
-            'reference' => request('ref'),
+            'prefill' => $questionnaires->prefill($type, is_string($reference) ? $reference : null, is_string($email) ? $email : null),
         ]);
     }
 
@@ -70,13 +73,14 @@ class OnboardingController extends Controller
 
         $mailed = $this->sendQuestionnaireMail($payload);
 
+        $route = $type === 'advertiser' ? 'onboarding.advertiser' : 'onboarding.publisher';
+
         if (! $persisted && ! $mailed) {
-            return back()
+            return redirect()
+                ->route($route, $this->onboardingQueryParams($payload))
                 ->withInput()
                 ->with('error', 'We could not submit your questionnaire right now. Please try again or email '.BrandContact::email().'.');
         }
-
-        $route = $type === 'advertiser' ? 'onboarding.advertiser' : 'onboarding.publisher';
 
         return redirect()
             ->route($route, ['email' => $payload['contact_email'], 'ref' => $payload['partner_reference'] ?? null])
@@ -105,6 +109,20 @@ class OnboardingController extends Controller
 
             return false;
         }
+    }
+
+    /**
+     * @param  array<string, mixed>  $payload
+     * @return array<string, string>
+     */
+    protected function onboardingQueryParams(array $payload): array
+    {
+        return array_filter([
+            'email' => (string) ($payload['contact_email'] ?? ''),
+            'ref' => filled($payload['partner_reference'] ?? null)
+                ? (string) $payload['partner_reference']
+                : null,
+        ], fn ($value) => filled($value));
     }
 }
 

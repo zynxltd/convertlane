@@ -50,11 +50,11 @@
                             <div class="grid gap-5 sm:grid-cols-2">
                                 <div>
                                     <label class="form-label" for="partner_reference">Reference (optional)</label>
-                                    <input class="form-input" id="partner_reference" name="partner_reference" value="{{ old('partner_reference', $reference) }}" placeholder="DD-P-00001">
+                                    <input class="form-input" id="partner_reference" name="partner_reference" value="{{ old('partner_reference', $prefill['partner_reference'] ?? '') }}" placeholder="DD-P-00001">
                                 </div>
                                 <div>
                                     <label class="form-label" for="contact_email">Contact email</label>
-                                    <input class="form-input @error('contact_email') border-red-500 @enderror" id="contact_email" name="contact_email" type="email" required value="{{ old('contact_email', $email) }}" autocomplete="email">
+                                    <input class="form-input @error('contact_email') border-red-500 @enderror" id="contact_email" name="contact_email" type="email" required value="{{ old('contact_email', $prefill['contact_email'] ?? '') }}" autocomplete="email">
                                     @error('contact_email')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="grid gap-5 sm:grid-cols-2">
                                 <div>
                                     <label class="form-label" for="contact_name">Contact name</label>
-                                    <input class="form-input @error('contact_name') border-red-500 @enderror" id="contact_name" name="contact_name" required value="{{ old('contact_name') }}" placeholder="Full name">
+                                    <input class="form-input @error('contact_name') border-red-500 @enderror" id="contact_name" name="contact_name" required value="{{ old('contact_name', $prefill['contact_name'] ?? '') }}" placeholder="Full name">
                                     @error('contact_name')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                                 </div>
                                 <div>
@@ -80,48 +80,48 @@
                             <div class="grid gap-5 sm:grid-cols-2">
                                 <div>
                                     <label class="form-label" for="company_name">Company / trading name (if applicable)</label>
-                                    <input class="form-input" id="company_name" name="company_name" value="{{ old('company_name') }}">
+                                    <input class="form-input" id="company_name" name="company_name" value="{{ old('company_name', $prefill['company_name'] ?? '') }}">
                                 </div>
                                 <div>
                                     <label class="form-label" for="company_number">Company number (if applicable)</label>
-                                    <input class="form-input" id="company_number" name="company_number" value="{{ old('company_number') }}">
+                                    <input class="form-input" id="company_number" name="company_number" value="{{ old('company_number', $prefill['company_number'] ?? '') }}">
                                 </div>
                             </div>
 
                             <div class="grid gap-5 sm:grid-cols-2">
                                 <div>
-                                    <label class="form-label" for="website">Primary website</label>
-                                    <input class="form-input @error('website') border-red-500 @enderror" id="website" name="website" required value="{{ old('website') }}" placeholder="example.com">
+                                    <label class="form-label" for="website">Primary website <span class="text-muted">(optional)</span></label>
+                                    <input class="form-input @error('website') border-red-500 @enderror" id="website" name="website" value="{{ old('website', $prefill['website'] ?? '') }}" placeholder="example.com">
                                     @error('website')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                                 </div>
-                                <x-country-select name="country" id="country" label="Country" required />
+                                <x-country-select name="country" id="country" label="Country" :value="$prefill['country'] ?? null" required />
                             </div>
 
                             <div>
                                 <label class="form-label" for="traffic_sources">Traffic sources (how you get users)</label>
-                                <textarea class="form-input @error('traffic_sources') border-red-500 @enderror" id="traffic_sources" name="traffic_sources" rows="3" maxlength="2000" placeholder="SEO, paid social, email, native, etc.">{{ old('traffic_sources') }}</textarea>
+                                <textarea class="form-input @error('traffic_sources') border-red-500 @enderror" id="traffic_sources" name="traffic_sources" rows="3" maxlength="2000" placeholder="SEO, paid social, email, native, etc.">{{ old('traffic_sources', $prefill['traffic_sources'] ?? '') }}</textarea>
                                 @error('traffic_sources')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                             </div>
                             <div>
                                 <label class="form-label" for="promo_channels">Websites / channels you will use</label>
-                                <textarea class="form-input @error('promo_channels') border-red-500 @enderror" id="promo_channels" name="promo_channels" rows="3" maxlength="2000" placeholder="List domains and channels (sites, socials, email list types).">{{ old('promo_channels') }}</textarea>
+                                <textarea class="form-input @error('promo_channels') border-red-500 @enderror" id="promo_channels" name="promo_channels" rows="3" maxlength="2000" placeholder="List domains and channels (sites, socials, email list types).">{{ old('promo_channels', $prefill['promo_channels'] ?? '') }}</textarea>
                                 @error('promo_channels')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                             </div>
 
                             <div class="grid gap-5 sm:grid-cols-2">
                                 <div>
                                     <label class="form-label" for="top_countries">Top countries (comma-separated)</label>
-                                    <input class="form-input" id="top_countries" name="top_countries" value="{{ old('top_countries') }}" placeholder="GB, US, CA">
+                                    <input class="form-input" id="top_countries" name="top_countries" value="{{ old('top_countries', $prefill['top_countries'] ?? '') }}" placeholder="GB, US, CA">
                                 </div>
                                 <div>
                                     <label class="form-label" for="monthly_volume">Estimated monthly volume</label>
-                                    <input class="form-input" id="monthly_volume" name="monthly_volume" value="{{ old('monthly_volume') }}" placeholder="e.g. 50k sessions / £5k–£25k">
+                                    <input class="form-input" id="monthly_volume" name="monthly_volume" value="{{ old('monthly_volume', $prefill['monthly_volume'] ?? '') }}" placeholder="e.g. 50k sessions / £5k–£25k">
                                 </div>
                             </div>
 
                             <div>
                                 <label class="form-label" for="notes">Anything else we should know?</label>
-                                <textarea class="form-input" id="notes" name="notes" rows="4" maxlength="5000">{{ old('notes') }}</textarea>
+                                <textarea class="form-input" id="notes" name="notes" rows="4" maxlength="5000">{{ old('notes', $prefill['notes'] ?? '') }}</textarea>
                             </div>
 
                             <label class="mt-2 flex items-start gap-3 text-sm text-muted">

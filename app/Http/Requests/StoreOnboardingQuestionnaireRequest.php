@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 use Illuminate\Validation\Rule;
 
 class StoreOnboardingQuestionnaireRequest extends FormRequest
@@ -28,7 +30,7 @@ class StoreOnboardingQuestionnaireRequest extends FormRequest
             // Basics
             'company_name' => [$isAdvertiser ? 'required' : 'nullable', 'string', 'max:255'],
             'company_number' => ['nullable', 'string', 'max:80'],
-            'website' => ['required', 'url', 'max:500'],
+            'website' => [$isAdvertiser ? 'required' : 'nullable', 'url', 'max:500'],
             'country' => ['required', 'string', 'size:2', 'regex:/^[A-Z]{2}$/'],
 
             // Publisher traffic profile
@@ -66,6 +68,23 @@ class StoreOnboardingQuestionnaireRequest extends FormRequest
             'country.required' => 'Country is required.',
             'confirm_id_required.accepted' => 'You must confirm you can provide government-issued ID and proof of address to proceed.',
         ];
+    }
+
+    protected function failedValidation(Validator $validator): void
+    {
+        $route = $this->routeIs('onboarding.advertiser.store')
+            ? 'onboarding.advertiser'
+            : 'onboarding.publisher';
+
+        throw new HttpResponseException(
+            redirect()
+                ->route($route, array_filter([
+                    'email' => $this->input('contact_email'),
+                    'ref' => $this->input('partner_reference'),
+                ], fn ($value) => filled($value)))
+                ->withInput()
+                ->withErrors($validator)
+        );
     }
 }
 
