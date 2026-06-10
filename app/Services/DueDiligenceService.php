@@ -76,6 +76,48 @@ class DueDiligenceService
         return $review->fresh();
     }
 
+    public function findReviewForQuestionnaire(string $type, ?string $reference, string $email): ?DueDiligenceReview
+    {
+        if (filled($reference)) {
+            $byReference = DueDiligenceReview::query()
+                ->where('partner_reference', $reference)
+                ->where('type', $type)
+                ->first();
+
+            if ($byReference) {
+                return $byReference;
+            }
+        }
+
+        return DueDiligenceReview::query()
+            ->where('type', $type)
+            ->whereHas('application', fn ($query) => $query->where('email', $email))
+            ->latest('id')
+            ->first();
+    }
+
+    /**
+     * @param  array<string, mixed>  $payload
+     */
+    public function recordQuestionnaire(DueDiligenceReview $review, array $payload): void
+    {
+        $snapshot = $review->checklist_snapshot ?? [];
+        $snapshot['onboarding_questionnaire'] = [
+            'submitted_at' => now()->toIso8601String(),
+            'responses' => $payload,
+        ];
+
+        $review->update(['checklist_snapshot' => $snapshot]);
+
+        $this->log(
+            $review,
+            $review->status,
+            $review->status,
+            'Onboarding questionnaire received via web form.',
+            ['partner_reference' => $review->partner_reference],
+        );
+    }
+
     public function calculateRiskBand(int $score): string
     {
         foreach (config('compliance.risk_bands') as $band => $range) {

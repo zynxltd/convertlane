@@ -9,7 +9,7 @@ use Tests\TestCase;
 class BrandContactTest extends TestCase
 {
     #[DataProvider('legacyEmails')]
-    public function test_legacy_addresses_normalize_to_contact_co_uk(string $legacy): void
+    public function test_legacy_addresses_normalize_to_partners_co_uk(string $legacy): void
     {
         $method = new \ReflectionMethod(BrandContact::class, 'normalizeEmail');
         $method->setAccessible(true);
@@ -53,9 +53,9 @@ class BrandContactTest extends TestCase
     public static function legacyEmails(): array
     {
         return [
-            ['partners@convertlane.com'],
+            ['contact@convertlane.com'],
+            ['contact@convertlane.co.uk'],
             ['support@convertlane.com'],
-            ['partners@convertlane.co.uk'],
             ['support@convertlane.co.uk'],
         ];
     }

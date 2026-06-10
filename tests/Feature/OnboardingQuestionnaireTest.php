@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Mail\OnboardingQuestionnaireMail;
+use App\Models\Application;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
@@ -77,6 +78,44 @@ class OnboardingQuestionnaireTest extends TestCase
                 && ($mail->payload['type'] ?? null) === 'advertiser'
                 && ($mail->payload['partner_reference'] ?? null) === 'DD-A-00002';
         });
+    }
+
+    public function test_publisher_questionnaire_persists_to_due_diligence_review(): void
+    {
+        Mail::fake();
+
+        $application = Application::create([
+            'type' => 'publisher',
+            'first_name' => 'Jane',
+            'last_name' => 'Publisher',
+            'email' => 'publisher@example.com',
+            'company' => 'Example Media Ltd',
+            'partner_reference' => 'DD-P-00001',
+            'dd_status' => 'applied',
+        ]);
+
+        $review = $application->dueDiligenceReview()->create([
+            'partner_reference' => 'DD-P-00001',
+            'type' => 'publisher',
+            'status' => 'applied',
+        ]);
+
+        $this->post(route('onboarding.publisher.store'), [
+            'partner_reference' => 'DD-P-00001',
+            'contact_email' => 'publisher@example.com',
+            'contact_name' => 'Jane Publisher',
+            'entity_type' => 'individual',
+            'website' => 'https://example.com',
+            'country' => 'GB',
+            'traffic_sources' => 'SEO and paid social.',
+            'promo_channels' => 'https://example.com',
+            'confirm_id_required' => '1',
+        ])->assertRedirect();
+
+        $review->refresh();
+
+        $this->assertSame('Jane Publisher', $review->checklist_snapshot['onboarding_questionnaire']['responses']['contact_name'] ?? null);
+        $this->assertSame('publisher@example.com', $review->checklist_snapshot['onboarding_questionnaire']['responses']['contact_email'] ?? null);
     }
 
     public function test_publisher_questionnaire_requires_core_fields(): void

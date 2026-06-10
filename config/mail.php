@@ -108,10 +108,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS')
-            ?: env('BRAND_CONTACT_EMAIL')
-            ?: env('BRAND_EMAIL')
-            ?: 'hello@example.com',
+        'address' => env('MAIL_FROM_ADDRESS', 'contact@convertlane.co.uk'),
         'name' => env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel')),
     ],
 

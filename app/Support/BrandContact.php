@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\URL;
 
 class BrandContact
 {
-    public const DEFAULT_EMAIL = 'contact@convertlane.co.uk';
+    public const DEFAULT_EMAIL = 'partners@convertlane.co.uk';
 
     public const DEFAULT_URL = 'https://convertlane.co.uk';
 
@@ -97,10 +97,10 @@ class BrandContact
         $email = str_replace('@convertlane.com', '@convertlane.co.uk', $email);
 
         if (in_array($email, [
+            'contact@convertlane.co.uk',
             'support@convertlane.co.uk',
-            'partners@convertlane.co.uk',
+            'contact@convertlane.com',
             'support@convertlane.com',
-            'partners@convertlane.com',
         ], true)) {
             return self::DEFAULT_EMAIL;
         }

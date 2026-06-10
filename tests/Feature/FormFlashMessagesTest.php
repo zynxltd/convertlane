@@ -77,18 +77,26 @@ class FormFlashMessagesTest extends TestCase
             ->assertSee('Submit questionnaire', false);
     }
 
-    public function test_onboarding_mail_failure_logs_error_and_shows_flash(): void
+    public function test_onboarding_mail_failure_still_succeeds_when_questionnaire_is_persisted(): void
     {
         Mail::shouldReceive('to')->once()->andReturnSelf();
         Mail::shouldReceive('send')->once()->andThrow(new \RuntimeException('SMTP failure'));
 
-        Log::shouldReceive('error')
-            ->once()
-            ->withArgs(function (string $message, array $context) {
-                return $message === 'Onboarding questionnaire submission failed'
-                    && ($context['type'] ?? null) === 'publisher'
-                    && ($context['email'] ?? null) === 'publisher@example.com';
-            });
+        $application = Application::create([
+            'type' => 'publisher',
+            'first_name' => 'Jane',
+            'last_name' => 'Publisher',
+            'email' => 'publisher@example.com',
+            'company' => 'Example Media Ltd',
+            'partner_reference' => 'DD-P-00001',
+            'dd_status' => 'applied',
+        ]);
+
+        $application->dueDiligenceReview()->create([
+            'partner_reference' => 'DD-P-00001',
+            'type' => 'publisher',
+            'status' => 'applied',
+        ]);
 
         $response = $this->from(route('onboarding.publisher'))
             ->post(route('onboarding.publisher.store'), [
@@ -103,14 +111,17 @@ class FormFlashMessagesTest extends TestCase
                 'confirm_id_required' => '1',
             ]);
 
-        $response->assertRedirect(route('onboarding.publisher'))
-            ->assertSessionHas('error')
-            ->assertSessionHasInput('contact_email', 'publisher@example.com');
+        $response->assertRedirect(route('onboarding.publisher', [
+            'email' => 'publisher@example.com',
+            'ref' => 'DD-P-00001',
+        ]))
+            ->assertSessionHas('success')
+            ->assertSessionMissing('error');
 
         $this->followRedirects($response)
             ->assertOk()
-            ->assertSee('could not submit your questionnaire', false)
-            ->assertSee('Submit questionnaire', false);
+            ->assertSee('review your answers', false)
+            ->assertDontSee('could not submit your questionnaire', false);
     }
 
     public function test_apply_submission_failure_logs_error_and_shows_flash(): void
