@@ -74,6 +74,25 @@ class ContactController extends Controller
 
     protected function sendContactMail(Contact $contact): bool
     {
+        $mailer = (string) config('mail.default');
+        $postmarkConfigured = filled(config('services.postmark.key'));
+
+        Log::info('Contact form sending email', [
+            'contact_id' => $contact->id,
+            'mailer' => $mailer,
+            'postmark_configured' => $postmarkConfigured,
+            'from' => config('mail.from.address'),
+            'to' => BrandContact::email(),
+        ]);
+
+        if ($mailer === 'postmark' && ! $postmarkConfigured) {
+            Log::error('Contact form email skipped: POSTMARK_API_KEY is not configured', [
+                'contact_id' => $contact->id,
+            ]);
+
+            return false;
+        }
+
         try {
             $mail = (new ContactSubmissionMail($contact))
                 ->replyTo($contact->email, $contact->name);

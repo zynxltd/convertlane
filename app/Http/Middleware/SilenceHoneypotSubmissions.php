@@ -16,8 +16,9 @@ class SilenceHoneypotSubmissions
     {
         foreach (self::TRAP_FIELDS as $field) {
             if (filled($request->input($field))) {
-                Log::info('Contact form honeypot discarded', [
+                Log::warning('Contact form honeypot discarded', [
                     'field' => $field,
+                    'trap_length' => strlen((string) $request->input($field)),
                     'ip' => $request->ip(),
                     'email' => $request->input('email'),
                     'subject' => $request->input('subject'),
