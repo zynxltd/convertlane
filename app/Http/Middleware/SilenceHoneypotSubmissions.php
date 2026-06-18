@@ -16,9 +16,12 @@ class SilenceHoneypotSubmissions
     {
         foreach (self::TRAP_FIELDS as $field) {
             if (filled($request->input($field))) {
-                Log::info('Contact form honeypot triggered', [
+                Log::info('Contact form honeypot discarded', [
                     'field' => $field,
                     'ip' => $request->ip(),
+                    'email' => $request->input('email'),
+                    'subject' => $request->input('subject'),
+                    'user_agent' => $request->userAgent(),
                 ]);
 
                 return redirect()

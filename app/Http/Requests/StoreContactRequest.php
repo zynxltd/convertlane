@@ -2,8 +2,11 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 
 class StoreContactRequest extends FormRequest
 {
@@ -45,5 +48,18 @@ class StoreContactRequest extends FormRequest
     public function attributes(): array
     {
         return [];
+    }
+
+    protected function failedValidation(Validator $validator): void
+    {
+        Log::info('Contact form validation failed', [
+            'email' => $this->input('email'),
+            'subject' => $this->input('subject'),
+            'errors' => $validator->errors()->keys(),
+            'ip' => $this->ip(),
+            'user_agent' => $this->userAgent(),
+        ]);
+
+        throw new ValidationException($validator);
     }
 }
