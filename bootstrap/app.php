@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Middleware\AdminAccess;
+use App\Http\Middleware\ComplianceAccess;
+use App\Http\Middleware\SilenceHoneypotSubmissions;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -12,8 +15,9 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias([
-            'compliance' => \App\Http\Middleware\ComplianceAccess::class,
-            'admin' => \App\Http\Middleware\AdminAccess::class,
+            'compliance' => ComplianceAccess::class,
+            'admin' => AdminAccess::class,
+            'honeypot.contact' => SilenceHoneypotSubmissions::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {

@@ -14,7 +14,7 @@ class ContactPageTest extends TestCase
         $response = $this->get(route('contact'));
 
         $response->assertOk();
-        $response->assertSee('name="website_hp"', false);
+        $response->assertSee('name="_trap"', false);
         $response->assertSee('Send message');
     }
 }

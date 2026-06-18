@@ -55,13 +55,18 @@ class FormValidationTest extends TestCase
         $response->assertSessionHasErrors(['name', 'email', 'subject', 'message']);
     }
 
-    public function test_contact_rejects_honeypot(): void
+    public function test_contact_silently_accepts_honeypot_spam(): void
     {
         $response = $this->post(route('contact.store'), $this->validContactPayload([
-            'website_hp' => 'spam',
+            '_trap' => 'spam',
         ]));
 
-        $response->assertSessionHasErrors('website_hp');
+        $response->assertRedirect(route('contact'));
+        $response->assertSessionHas('success');
+        $response->assertSessionMissing('error');
+        $this->assertDatabaseMissing('contacts', [
+            'email' => 'alex@example.com',
+        ]);
     }
 
     public function test_contact_accepts_valid_message(): void
@@ -110,7 +115,6 @@ class FormValidationTest extends TestCase
             'email' => 'alex@example.com',
             'subject' => 'Partnerships',
             'message' => 'I would like to discuss a partnership opportunity.',
-            'website_hp' => '',
         ], $overrides);
     }
 }

@@ -21,7 +21,6 @@ class ContactSubmissionMailTest extends TestCase
             'email' => 'alex@example.com',
             'subject' => 'Partnerships',
             'message' => 'I would like to discuss a partnership opportunity.',
-            'website_hp' => '',
         ])->assertRedirect(route('contact'))
             ->assertSessionHas('success');
 
@@ -43,7 +42,6 @@ class ContactSubmissionMailTest extends TestCase
             'email' => 'alex@example.com',
             'subject' => 'Partnerships',
             'message' => 'I would like to discuss a partnership opportunity.',
-            'website_hp' => '',
         ])->assertRedirect(route('contact'))
             ->assertSessionHas('success')
             ->assertSessionMissing('error');

@@ -27,7 +27,7 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])
-    ->middleware('throttle:5,1')
+    ->middleware(['honeypot.contact', 'throttle:5,1'])
     ->name('contact.store');
 
 Route::get('/apply', [ApplicationController::class, 'create'])->name('apply');

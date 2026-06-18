@@ -29,7 +29,6 @@ class StoreContactRequest extends FormRequest
             'email' => ['required', 'email:rfc', 'max:255'],
             'subject' => ['required', 'string', Rule::in(self::SUBJECTS)],
             'message' => ['required', 'string', 'min:10', 'max:5000'],
-            'website_hp' => ['nullable', 'string', 'max:0'],
         ];
     }
 
@@ -40,14 +39,11 @@ class StoreContactRequest extends FormRequest
             'email.email' => 'Please enter a valid email address.',
             'subject.in' => 'Please choose a subject from the list.',
             'message.min' => 'Please enter at least 10 characters in your message.',
-            'website_hp.max' => 'Your submission could not be processed.',
         ];
     }
 
     public function attributes(): array
     {
-        return [
-            'website_hp' => 'form',
-        ];
+        return [];
     }
 }

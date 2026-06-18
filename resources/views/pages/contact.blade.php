@@ -23,8 +23,7 @@
                 <form action="{{ route('contact.store') }}" method="POST" class="relative glass rounded-2xl p-8" novalidate>
                     @csrf
                     <div class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
-                        <label for="website_hp">Leave blank</label>
-                        <input type="text" name="website_hp" id="website_hp" value="" tabindex="-1" autocomplete="off">
+                        <input type="text" name="_trap" id="contact_trap" value="" tabindex="-1" autocomplete="new-password">
                     </div>
                     <div class="space-y-5">
                         @if ($errors->any())
