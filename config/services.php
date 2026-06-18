@@ -43,4 +43,9 @@ return [
         'advertiser_fallback_url' => env('ADVERTISER_PANEL_URL', 'https://convertlane.offer18.com/m'),
     ],
 
+    'turnstile' => [
+        'site_key' => env('TURNSTILE_SITE_KEY'),
+        'secret_key' => env('TURNSTILE_SECRET_KEY'),
+    ],
+
 ];

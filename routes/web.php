@@ -1,18 +1,18 @@
 <?php
 
 use App\Http\Controllers\Admin\OfferController as AdminOfferController;
-use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\AdvertiserEnquiryController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\OnboardingAgreementController;
-use App\Http\Controllers\OnboardingController;
-use App\Http\Controllers\PasswordResetController;
-use App\Http\Controllers\OffersController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ComplianceController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LegalController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OffersController;
+use App\Http\Controllers\OnboardingAgreementController;
+use App\Http\Controllers\OnboardingController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PasswordResetController;
 use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +26,9 @@ Route::get('/verticals', [PageController::class, 'verticals'])->name('verticals'
 Route::get('/about', [PageController::class, 'about'])->name('about');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])
+    ->middleware('throttle:5,1')
+    ->name('contact.store');
 
 Route::get('/apply', [ApplicationController::class, 'create'])->name('apply');
 Route::post('/apply', [ApplicationController::class, 'store'])->name('apply.store');

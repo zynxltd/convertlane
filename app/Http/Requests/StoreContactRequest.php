@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\Turnstile;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -30,6 +31,11 @@ class StoreContactRequest extends FormRequest
             'subject' => ['required', 'string', Rule::in(self::SUBJECTS)],
             'message' => ['required', 'string', 'min:10', 'max:5000'],
             'website_hp' => ['nullable', 'string', 'max:0'],
+            'cf-turnstile-response' => [
+                Rule::requiredIf(fn () => Turnstile::enabled()),
+                'string',
+                new Turnstile,
+            ],
         ];
     }
 
@@ -41,6 +47,7 @@ class StoreContactRequest extends FormRequest
             'subject.in' => 'Please choose a subject from the list.',
             'message.min' => 'Please enter at least 10 characters in your message.',
             'website_hp.max' => 'Your submission could not be processed.',
+            'cf-turnstile-response.required' => 'Please complete the security check.',
         ];
     }
 
