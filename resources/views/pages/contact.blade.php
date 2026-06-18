@@ -61,7 +61,6 @@
                             <textarea name="message" id="message" rows="5" required minlength="10" maxlength="5000" class="form-input focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 @error('message') border-red-500 @enderror">{{ old('message') }}</textarea>
                             @error('message')<p class="mt-1 text-sm text-red-400">{{ $message }}</p>@enderror
                         </div>
-                        <x-turnstile />
                         <button type="submit" class="btn-primary w-full">Send message</button>
                     </div>
                 </form>
