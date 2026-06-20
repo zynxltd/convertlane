@@ -32,8 +32,8 @@
                         </span>
                     </span>
                     <span class="sr-only" aria-live="polite" id="hero-scroll-live">{{ $heroItems[0]['verb'] }} {{ $heroItems[0]['word'] }}</span>
-                    <span class="home-hero-tagline" id="hero-tagline">{{ $heroItems[0]['tagline'] }}</span>
                 </h1>
+                <p class="home-hero-tagline" id="hero-tagline">{{ $heroItems[0]['tagline'] }}</p>
             </div>
 
             <div class="home-hero-cta">
