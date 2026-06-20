@@ -30,4 +30,9 @@ class PageController extends Controller
     {
         return view('pages.about');
     }
+
+    public function emailSignature(): View
+    {
+        return view('pages.email-signature');
+    }
 }

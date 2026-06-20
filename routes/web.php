@@ -24,6 +24,7 @@ Route::get('/publishers', [PageController::class, 'publishers'])->name('publishe
 Route::get('/offers', [OffersController::class, 'index'])->name('offers');
 Route::get('/verticals', [PageController::class, 'verticals'])->name('verticals');
 Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/email-signature', [PageController::class, 'emailSignature'])->name('email-signature');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])
