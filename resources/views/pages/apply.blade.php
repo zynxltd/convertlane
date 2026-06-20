@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Apply to Join the Network"
-    description="Apply to join ConvertLane as a publisher or advertiser. Manually reviewed within 48 hours — vetted partners only."
+    description="Apply to join ConvertLane as a publisher or advertiser. Sole traders, individuals, and companies welcome — reviewed within 3 business days."
     :canonical="route('apply')"
 >
     <x-page-hero eyebrow="Apply">
@@ -10,8 +10,13 @@
 
     <section class="py-16 lg:py-24">
         <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-lg rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-xs text-amber-800 dark:text-amber-200">
-                You will need: company registration, director ID, traffic proof (publishers) or financials & licences (advertisers). Free-email-only applications without a corporate site are declined.
+            <div class="mx-auto max-w-lg space-y-2 rounded-xl border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-center text-xs leading-relaxed text-amber-800 dark:text-amber-200">
+                <p>
+                    You can apply as a <strong>company, sole trader, or individual</strong>. You will need proof of identity and either traffic examples (publishers) or product and financial details (advertisers). Company registration is only required where applicable.
+                </p>
+                <p>
+                    Applications using only a free personal email with no verifiable website or trading presence may be declined. Approval may take up to <strong>3 business days</strong>.
+                </p>
             </div>
 
             @php

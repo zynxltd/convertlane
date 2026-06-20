@@ -7,9 +7,6 @@
                 <p class="mt-5 max-w-xs text-sm leading-relaxed text-muted">
                     {{ config('brand.signature') }}
                 </p>
-                <p class="mt-3 text-xs text-slate-500">
-                    {{ config('brand.legal_name') }} · {{ config('brand.registered') }}
-                </p>
                 <div class="mt-6 flex gap-3">
                     <a href="{{ config('brand.social.linkedin') }}" class="flex h-9 w-9 items-center justify-center rounded-lg border border-subtle text-muted transition hover:border-brand-500/30 hover:text-brand-400" rel="noopener" aria-label="LinkedIn">
                         <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -50,7 +47,7 @@
             </div>
         </div>
         <div class="mt-12 flex flex-col gap-4 border-t border-subtle-5 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>&copy; {{ date('Y') }} {{ config('brand.legal_name') }}</p>
+            <p>&copy; {{ date('Y') }} {{ config('brand.name') }}</p>
             <a href="mailto:{{ config('brand.contact_email') }}" class="font-medium text-muted hover:text-brand-400">{{ config('brand.contact_email') }}</a>
         </div>
     </div>

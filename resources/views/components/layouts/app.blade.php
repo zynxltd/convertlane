@@ -17,7 +17,7 @@
 
     <script>
         (function () {
-            if (localStorage.getItem('cl_theme') !== 'light') {
+            if (localStorage.getItem('cl_theme') === 'dark') {
                 document.documentElement.classList.add('dark');
             }
         })();

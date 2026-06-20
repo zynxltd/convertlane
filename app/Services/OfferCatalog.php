@@ -7,20 +7,32 @@ use Illuminate\Support\Facades\Schema;
 
 class OfferCatalog
 {
+    public function __construct(
+        protected Offer18OffersService $offer18Offers,
+    ) {}
+
     /**
      * @return list<array<string, mixed>>
      */
     public function live(): array
     {
         if ($this->offersTableReady() && Offer::query()->exists()) {
-            return $this->enrich(
-                Offer::query()->published()->ordered()->get()
-                    ->map(fn (Offer $offer) => $offer->toCatalogArray())
-                    ->all()
+            return $this->excludePrivate(
+                $this->enrich(
+                    Offer::query()->published()->ordered()->get()
+                        ->map(fn (Offer $offer) => $offer->toCatalogArray())
+                        ->all()
+                )
             );
         }
 
-        return $this->enrich(config('offers.live', []));
+        $fromOffer18 = $this->offer18Offers->liveCatalog();
+
+        if ($fromOffer18 !== []) {
+            return $this->excludePrivate($this->enrich($fromOffer18));
+        }
+
+        return $this->excludePrivate($this->enrich(config('offers.live', [])));
     }
 
     /**
@@ -106,6 +118,18 @@ class OfferCatalog
                     'vertical_icon' => $vertical['icon'] ?? 'banknotes',
                 ]);
             })
+            ->values()
+            ->all();
+    }
+
+    /**
+     * @param  list<array<string, mixed>>  $offers
+     * @return list<array<string, mixed>>
+     */
+    protected function excludePrivate(array $offers): array
+    {
+        return collect($offers)
+            ->where('status', '!=', 'private')
             ->values()
             ->all();
     }

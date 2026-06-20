@@ -8,8 +8,9 @@ Alpine.data('offersFilter', (offers) => ({
     model: 'all',
     geo: 'all',
     status: 'all',
-    inHouseOnly: false,
     search: '',
+    page: 1,
+    perPage: 10,
 
     init() {
         const params = new URLSearchParams(window.location.search);
@@ -17,33 +18,53 @@ Alpine.data('offersFilter', (offers) => ({
         if (params.get('model')) this.model = params.get('model');
         if (params.get('geo')) this.geo = params.get('geo');
         if (params.get('status')) this.status = params.get('status');
-        if (params.get('in_house') === '1') this.inHouseOnly = true;
         if (params.get('q')) this.search = params.get('q');
-    },
 
-    get filtered() {
-        const q = this.search.trim().toLowerCase();
-
-        return this.offers.filter((offer) => {
-            if (this.vertical !== 'all' && offer.vertical !== this.vertical) return false;
-            if (this.model !== 'all' && offer.model !== this.model) return false;
-            if (this.geo !== 'all' && !offer.geos.includes(this.geo)) return false;
-            if (this.status !== 'all' && offer.status !== this.status) return false;
-            if (this.inHouseOnly && !offer.in_house) return false;
-            if (q) {
-                const hay = `${offer.name} ${offer.brand} ${offer.description} ${offer.vertical_name}`.toLowerCase();
-                if (!hay.includes(q)) return false;
-            }
-            return true;
+        ['search', 'vertical', 'model', 'geo', 'status'].forEach((key) => {
+            this.$watch(key, () => {
+                this.page = 1;
+            });
         });
     },
 
-    get resultLabel() {
-        const n = this.filtered.length;
-        const total = this.offers.length;
-        return n === total
-            ? `Showing all ${total} offers`
-            : `Showing ${n} of ${total} offers`;
+    get filteredIndices() {
+        const q = this.search.trim().toLowerCase();
+
+        return this.offers.reduce((indices, offer, index) => {
+            if (offer.status === 'private') return indices;
+            if (this.vertical !== 'all' && offer.vertical !== this.vertical) return indices;
+            if (this.model !== 'all' && offer.model !== this.model) return indices;
+            if (this.geo !== 'all' && !offer.geos.includes(this.geo)) return indices;
+            if (this.status !== 'all' && offer.status !== this.status) return indices;
+            if (q) {
+                const hay = `${offer.name} ${offer.id} ${offer.vertical_name}`.toLowerCase();
+                if (!hay.includes(q)) return indices;
+            }
+            indices.push(index);
+            return indices;
+        }, []);
+    },
+
+    get filtered() {
+        return this.filteredIndices.map((index) => this.offers[index]);
+    },
+
+    get totalPages() {
+        return Math.max(1, Math.ceil(this.filteredIndices.length / this.perPage));
+    },
+
+    get paginatedIndices() {
+        const start = (this.page - 1) * this.perPage;
+
+        return this.filteredIndices.slice(start, start + this.perPage);
+    },
+
+    rowVisible(index) {
+        return this.paginatedIndices.includes(index);
+    },
+
+    goToPage(nextPage) {
+        this.page = Math.min(Math.max(1, nextPage), this.totalPages);
     },
 
     resetFilters() {
@@ -51,17 +72,17 @@ Alpine.data('offersFilter', (offers) => ({
         this.model = 'all';
         this.geo = 'all';
         this.status = 'all';
-        this.inHouseOnly = false;
         this.search = '';
+        this.page = 1;
     },
 }));
 
 Alpine.data('theme', () => ({
-    dark: true,
+    dark: false,
 
     init() {
         const stored = localStorage.getItem('cl_theme');
-        this.dark = stored !== 'light';
+        this.dark = stored === 'dark';
         this.apply();
     },
 

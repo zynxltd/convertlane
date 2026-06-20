@@ -4,22 +4,6 @@
             A performance network built on <span class="text-gradient-hero">vetting, not volume</span>
         </x-slot:title>
         <x-slot:subtitle>{{ config('brand.origin') }}</x-slot:subtitle>
-        <x-slot:meta>
-            <dl>
-                <div>
-                    <dt>Legal entity</dt>
-                    <dd>{{ config('brand.legal_name') }}</dd>
-                </div>
-                <div>
-                    <dt>Registered</dt>
-                    <dd>{{ config('brand.registered') }}</dd>
-                </div>
-                <div>
-                    <dt>Based in</dt>
-                    <dd>United Kingdom</dd>
-                </div>
-            </dl>
-        </x-slot:meta>
     </x-page-hero>
 
     <section class="py-16 lg:py-24">
