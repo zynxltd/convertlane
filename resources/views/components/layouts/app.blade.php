@@ -39,7 +39,7 @@
 <body @class([
     'min-h-screen flex flex-col bg-mesh',
     'has-home-hero' => request()->routeIs('home'),
-]) x-data="{ mobileOpen: false, cookieConsent: localStorage.getItem('cl_cookie') === '1', ...theme() }">
+]) x-data="{ mobileOpen: false, cookieConsent: localStorage.getItem('cl_cookie') === '1', ...theme() }" x-effect="document.body.style.overflow = mobileOpen ? 'hidden' : ''">
     <div class="pointer-events-none fixed inset-0 bg-grid opacity-[0.18] dark:opacity-25" aria-hidden="true"></div>
 
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:text-white dark:focus:text-surface-950">Skip to content</a>

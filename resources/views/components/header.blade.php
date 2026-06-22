@@ -87,10 +87,10 @@
         id="mobile-menu"
         x-show="mobileOpen"
         x-cloak
+        @keydown.escape.window="mobileOpen = false"
         @class([
-            'px-4 py-4 backdrop-blur-xl lg:hidden',
-            'border-t border-white/10 bg-slate-950/95' => $overlay,
-            'border-t border-subtle-5 bg-white/95 dark:border-white/10 dark:bg-surface-900/98' => ! $overlay,
+            'pointer-events-auto border-t border-subtle-5 bg-white/95 px-4 py-4 backdrop-blur-xl lg:hidden dark:border-white/10 dark:bg-surface-900/98',
+            'mx-4 mt-2 rounded-2xl border shadow-xl shadow-slate-900/10 dark:shadow-black/40 sm:mx-5' => $overlay,
         ])
         aria-label="Mobile"
     >
@@ -106,28 +106,30 @@
             ] as $item)
                 <a
                     href="{{ route($item['route']) }}"
+                    @click="mobileOpen = false"
                     @class([
-                        'rounded-xl px-4 py-3 font-medium',
-                        'text-white hover:bg-white/10' => $overlay,
-                        'text-slate-900 hover:bg-slate-100 dark:text-white dark:hover:bg-white/10' => ! $overlay,
+                        'rounded-xl px-4 py-3 font-medium text-slate-900 hover:bg-slate-100 dark:text-white dark:hover:bg-white/10',
+                        'nav-link-active' => $route === $item['route'] || ($item['route'] === 'blog' && str_starts_with($route ?? '', 'blog')),
                     ])
                 >{{ $item['label'] }}</a>
             @endforeach
-            <div class="mt-2 grid grid-cols-2 gap-2 border-t border-subtle-5 pt-3">
+            <div class="mt-2 grid grid-cols-2 gap-2 border-t border-subtle-5 pt-3 dark:border-white/10">
                 <a
                     href="{{ $partnerLoginUrl }}"
+                    @click="mobileOpen = false"
                     class="rounded-xl border border-slate-300 px-3 py-2.5 text-center text-sm font-medium text-slate-800 hover:bg-slate-50 dark:border-white/15 dark:text-white dark:hover:bg-white/10"
                 >
                     Partner login
                 </a>
                 <a
                     href="{{ $advertiserLoginUrl }}"
+                    @click="mobileOpen = false"
                     class="rounded-xl border border-slate-300 px-3 py-2.5 text-center text-sm font-medium text-slate-800 hover:bg-slate-50 dark:border-white/15 dark:text-white dark:hover:bg-white/10"
                 >
                     Advertiser login
                 </a>
             </div>
-            <a href="{{ route('apply') }}" class="btn-primary mt-2 text-center">Join Network</a>
+            <a href="{{ route('apply') }}" @click="mobileOpen = false" class="btn-primary mt-2 text-center">Join Network</a>
         </div>
     </nav>
 </header>
