@@ -78,11 +78,11 @@ Alpine.data('offersFilter', (offers) => ({
 }));
 
 Alpine.data('theme', () => ({
-    dark: false,
+    dark: true,
 
     init() {
         const stored = localStorage.getItem('cl_theme');
-        this.dark = stored === 'dark';
+        this.dark = stored !== 'light';
         this.apply();
     },
 

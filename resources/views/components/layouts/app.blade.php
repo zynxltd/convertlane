@@ -9,7 +9,7 @@
 ])
 
 <!DOCTYPE html>
-<html lang="en-GB" class="bg-slate-50 dark:bg-surface-950">
+<html lang="en-GB" class="bg-slate-50 dark dark:bg-surface-950">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,8 +17,8 @@
 
     <script>
         (function () {
-            if (localStorage.getItem('cl_theme') === 'dark') {
-                document.documentElement.classList.add('dark');
+            if (localStorage.getItem('cl_theme') === 'light') {
+                document.documentElement.classList.remove('dark');
             }
         })();
     </script>
