@@ -9,7 +9,7 @@
 
     <div class="mt-6 grid gap-8 sm:grid-cols-2">
         <div>
-            <p class="text-sm font-semibold text-heading">{{ $legalName }}</p>
+            <p class="text-sm font-semibold text-heading">{{ $legalName }} (trading as {{ config('brand.name') }})</p>
             <p class="mt-4 text-xs uppercase tracking-wide text-muted">Authorised signatory</p>
             <p class="mt-6 border-b border-slate-300 pb-1 text-sm text-muted dark:border-white/20">Pending countersignature</p>
             <p class="mt-2 text-sm text-body">Name: —</p>

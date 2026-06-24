@@ -6,7 +6,7 @@
 
 ## Parties
 
-**Network:** ConvertLane Ltd, United Kingdom (“**ConvertLane**”)  
+**Network:** zynx Ltd, United Kingdom (“**ConvertLane**”)  
 **Advertiser:** [Legal entity name], [Address], company no. [____] (“**Advertiser**”, “**you**”)
 
 **Effective date:** [____] · **Agreement ID:** CL-ADV-[____]
@@ -125,7 +125,7 @@ Each party complies with applicable data protection law. DPA signed separately i
 
 ## Signatures
 
-**ConvertLane Ltd** — Name / Title / Date  
+**zynx Ltd** — Name / Title / Date  
 **Advertiser** — Name / Title / Date  
 
 ---

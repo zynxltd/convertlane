@@ -4,7 +4,7 @@
 >
     <x-page-hero eyebrow="For advertisers">
         <x-slot:title>Acquire customers at <span class="text-gradient-hero">predictable CPA</span></x-slot:title>
-        <x-slot:subtitle>Performance marketing with publishers who are vetted before they send a single click — with finance-controlled billing and signed IOs on every offer.</x-slot:subtitle>
+        <x-slot:subtitle>Performance marketing with publishers who are vetted before they send a single click, with finance-controlled billing and signed IOs on every offer.</x-slot:subtitle>
         <x-slot:actions>
             <a href="{{ route('advertiser.enquiry') }}" class="btn-primary">Launch an offer</a>
             <a href="{{ route('contact') }}" class="btn-secondary">Book a call</a>
@@ -15,7 +15,7 @@
         <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <p class="eyebrow mx-auto">Advertiser programme</p>
             <h2 class="section-heading mt-4">Quality over quantity</h2>
-            <p class="section-sub mx-auto">We recruit publishers against your vertical and geo — not whoever signs up fastest. New advertisers typically start on prepay until delivery is proven.</p>
+            <p class="section-sub mx-auto">We recruit publishers against your vertical and geo, not whoever signs up fastest.</p>
         </div>
     </section>
 

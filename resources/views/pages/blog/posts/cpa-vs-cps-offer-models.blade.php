@@ -6,13 +6,13 @@
 
 <h3>Cost Per Action (CPA)</h3>
 
-<p>CPA pays a fixed or tiered commission when a user completes a defined action. That action might be account registration, email submission, app install, free trial activation, or first deposit — depending on the vertical and funnel stage. The key characteristic of CPA is that payment is tied to a specific, often upper-funnel, conversion event rather than a completed purchase.</p>
+<p>CPA pays a fixed or tiered commission when a user completes a defined action. That action might be account registration, email submission, app install, free trial activation, or first deposit, depending on the vertical and funnel stage. The key characteristic of CPA is that payment is tied to a specific, often upper-funnel, conversion event rather than a completed purchase.</p>
 
 <p>CPA is common in finance, insurance, lead generation, subscription trials, and mobile app campaigns where the advertiser's primary goal is qualified user acquisition at a predictable cost. Publishers earn as soon as the agreed action fires in the tracking platform, which makes CPA attractive for traffic partners who optimise for volume and conversion rate rather than average order value.</p>
 
 <h3>Cost Per Sale (CPS)</h3>
 
-<p>CPS — sometimes referred to as revenue share or cost per acquisition in a retail context — pays when a referred user completes a purchase or generates billable revenue. Commission is typically calculated as a flat fee per order or as a percentage of sale value. CPS aligns payout directly with monetisation, which makes it the default model for e-commerce, SaaS subscriptions with immediate payment, and any business where the primary KPI is revenue rather than lead volume.</p>
+<p>CPS, sometimes referred to as revenue share or cost per acquisition in a retail context, pays when a referred user completes a purchase or generates billable revenue. Commission is typically calculated as a flat fee per order or as a percentage of sale value. CPS aligns payout directly with monetisation, which makes it the default model for e-commerce, SaaS subscriptions with immediate payment, and any business where the primary KPI is revenue rather than lead volume.</p>
 
 <p>Because CPS compensation scales with transaction value, publishers with audiences that convert on higher-margin or higher-basket products can earn substantially more than under a flat CPA structure. Conversely, advertisers only pay when money changes hands, which protects margin on campaigns where lead quality varies significantly.</p>
 
@@ -61,7 +61,7 @@
     <li><strong>Blended effective rate.</strong> Advertisers model a target effective cost per customer and set CPA and CPS components so that combined payout approximates lifetime value at acceptable margin.</li>
 </ol>
 
-<p>Hybrid models require clearer IO documentation and more sophisticated reporting. Networks that support flexible deal structures — including custom events, hold periods, and tiered bonuses — reduce operational friction for both advertisers and publishers. ConvertLane works with partners to define these terms explicitly so that expectations on both sides remain aligned throughout the campaign lifecycle.</p>
+<p>Hybrid models require clearer IO documentation and more sophisticated reporting. Networks that support flexible deal structures, including custom events, hold periods, and tiered bonuses, reduce operational friction for both advertisers and publishers. ConvertLane works with partners to define these terms explicitly so that expectations on both sides remain aligned throughout the campaign lifecycle.</p>
 
 <x-blog.figure
     src="/images/verticals/saas.jpg"
@@ -71,19 +71,19 @@
 
 <h2>Publisher Incentives and Behaviour</h2>
 
-<p>Payout models do not merely describe accounting treatment — they actively shape how publishers allocate traffic, creative resources, and audience targeting. Understanding these behavioural incentives helps advertisers design programmes that attract the right partners and helps publishers select offers they can promote authentically.</p>
+<p>Payout models do not merely describe accounting treatment, they actively shape how publishers allocate traffic, creative resources, and audience targeting. Understanding these behavioural incentives helps advertisers design programmes that attract the right partners and helps publishers select offers they can promote authentically.</p>
 
 <h3>How CPA Influences Publishers</h3>
 
 <p>Under CPA, publishers optimise for conversion rate and cost per click efficiency. Media buyers favour channels with fast feedback loops: native ads, push, social, and search arbitrage. Content publishers may prioritise offers with simple landing pages and low friction forms because each additional step reduces completion rates and erodes margin.</p>
 
-<p>Because CPA pays on defined actions, publishers may deprioritise audience segments with strong engagement but lower immediate conversion propensity. That is not inherently negative — it reflects rational optimisation — but advertisers should ensure the paid action correlates with downstream revenue quality.</p>
+<p>Because CPA pays on defined actions, publishers may deprioritise audience segments with strong engagement but lower immediate conversion propensity. That is not inherently negative, it reflects rational optimisation, but advertisers should ensure the paid action correlates with downstream revenue quality.</p>
 
 <h3>How CPS Influences Publishers</h3>
 
 <p>CPS shifts publisher focus toward purchase intent, product relevance, and average order value. Review sites, deal communities, and loyalty platforms excel under CPS because their audiences arrive with commercial intent. Influencers and editorial publishers may prefer CPS when they can integrate product recommendations naturally without pushing aggressive lead-capture tactics.</p>
 
-<p>Publishers accepting CPS take on more risk: traffic costs are incurred upfront, but commission depends on the referred user completing a transaction — sometimes days or weeks later. Extended cookie windows, last-click attribution rules, and return policies all affect whether CPS campaigns are viable for a given traffic source.</p>
+<p>Publishers accepting CPS take on more risk: traffic costs are incurred upfront, but commission depends on the referred user completing a transaction, sometimes days or weeks later. Extended cookie windows, last-click attribution rules, and return policies all affect whether CPS campaigns are viable for a given traffic source.</p>
 
 <p>Publishers evaluating which models suit their inventory can learn more about programme requirements on our <a href="{{ route('publishers') }}">publishers page</a> and apply for access to campaigns matched to their traffic profile.</p>
 
@@ -91,7 +91,7 @@
 
 <p>Payout models have direct implications for working capital, accrual timing, and reconciliation workload. Advertisers often underestimate these operational differences when comparing headline commission rates across networks.</p>
 
-<p>CPA campaigns typically generate commission liability immediately upon validated conversion. If validation is instant, cash outflows track closely with media-driven volume spikes. Advertisers with tight cash conversion cycles may prefer CPA when the paid action closely precedes revenue — for example, a funded account in fintech — but struggle when CPA pays on registration alone and monetisation lags by weeks.</p>
+<p>CPA campaigns typically generate commission liability immediately upon validated conversion. If validation is instant, cash outflows track closely with media-driven volume spikes. Advertisers with tight cash conversion cycles may prefer CPA when the paid action closely precedes revenue, for example, a funded account in fintech, but struggle when CPA pays on registration alone and monetisation lags by weeks.</p>
 
 <p>CPS delays payout until purchase confirmation, which can improve near-term cash flow for advertisers scaling aggressively. However, CPS introduces reconciliation complexity: partial refunds, split shipments, subscription upgrades, and currency conversion all affect final commission calculations. Mature advertisers budget for commission reversals and implement hold periods before confirming publisher payments.</p>
 
@@ -110,7 +110,7 @@
     <li>Incrementality lift compared with organic and paid media baselines</li>
 </ul>
 
-<p>When LTV data is immature, starting with conservative CPA caps or lower CPS tiers protects margin while the programme generates sufficient volume for statistical analysis. Publishers benefit from this discipline too: advertisers that overspend on acquisition eventually reduce caps, pause campaigns, or tighten validation — all of which destabilise publisher earnings.</p>
+<p>When LTV data is immature, starting with conservative CPA caps or lower CPS tiers protects margin while the programme generates sufficient volume for statistical analysis. Publishers benefit from this discipline too: advertisers that overspend on acquisition eventually reduce caps, pause campaigns, or tighten validation, all of which destabilise publisher earnings.</p>
 
 <h2>Testing, Optimisation, and Incrementality</h2>
 
@@ -120,7 +120,7 @@
 
 <ol>
     <li><strong>Tracking verification.</strong> Confirm pixel fires, postbacks, and deduplication logic across devices and browsers before inviting publisher traffic.</li>
-    <li><strong>Controlled publisher cohort.</strong> Start with a small set of trusted partners representing different traffic types — content, search, social, and incentive — to observe variance in conversion quality.</li>
+    <li><strong>Controlled publisher cohort.</strong> Start with a small set of trusted partners representing different traffic types, content, search, social, and incentive, to observe variance in conversion quality.</li>
     <li><strong>Geo and device segmentation.</strong> Analyse performance by region and device class; CPA and CPS economics often diverge sharply on mobile versus desktop.</li>
     <li><strong>Creative and landing page iteration.</strong> Publisher traffic exposes weaknesses in landing page relevance faster than branded channels; use early data to refine messaging and form design.</li>
     <li><strong>Incrementality analysis.</strong> Where possible, run holdout or geo-lift tests to ensure affiliate spend drives net-new customers rather than capturing existing demand.</li>
@@ -130,7 +130,7 @@
 
 <h2>Caps, Budget Controls, and Pacing</h2>
 
-<p>Caps limit the volume of payable conversions within a defined period — daily, weekly, or monthly — and are essential for managing budget, inventory, and operational capacity. Both CPA and CPS programmes use caps, but the rationale and implementation differ.</p>
+<p>Caps limit the volume of payable conversions within a defined period, daily, weekly, or monthly, and are essential for managing budget, inventory, and operational capacity. Both CPA and CPS programmes use caps, but the rationale and implementation differ.</p>
 
 <p>Advertisers apply caps to:</p>
 
@@ -147,7 +147,7 @@
 
 <h2>Fraud Considerations Across Payout Models</h2>
 
-<p>Performance marketing attracts fraud because compensation is tied to measurable events. CPA programmes face elevated risk of fake leads, bot traffic, incentivised mis-clicks, and duplicate submissions. CPS programmes encounter coupon abuse, cookie stuffing, self-referral, and return arbitrage — where low-quality orders are placed to earn commission and then cancelled.</p>
+<p>Performance marketing attracts fraud because compensation is tied to measurable events. CPA programmes face elevated risk of fake leads, bot traffic, incentivised mis-clicks, and duplicate submissions. CPS programmes encounter coupon abuse, cookie stuffing, self-referral, and return arbitrage, where low-quality orders are placed to earn commission and then cancelled.</p>
 
 <p>Effective fraud mitigation combines technology, policy, and human review:</p>
 
@@ -163,7 +163,7 @@
 
 <h2>How Networks Like ConvertLane Structure IOs</h2>
 
-<p>An insertion order (IO) is the contractual backbone of an affiliate partnership. It translates commercial terms — payout model, rate, cap, geo, creative restrictions, and payment schedule — into enforceable rules within the tracking platform. Well-structured IOs reduce ambiguity and accelerate time to scale.</p>
+<p>An insertion order (IO) is the contractual backbone of an affiliate partnership. It translates commercial terms, payout model, rate, cap, geo, creative restrictions, and payment schedule, into enforceable rules within the tracking platform. Well-structured IOs reduce ambiguity and accelerate time to scale.</p>
 
 <p>ConvertLane IOs typically document the following elements for both CPA and CPS campaigns:</p>
 
@@ -177,7 +177,7 @@
     <li><strong>Payment terms.</strong> Net schedule, minimum threshold, supported payment methods, and chargeback handling.</li>
 </ol>
 
-<p>Advertisers launching new offers work with ConvertLane account managers to align IO terms with internal finance and legal requirements. Publishers receive the same terms in plain language within the platform, alongside creative assets and tracking links. When questions arise — whether on a borderline conversion or a cap override — <a href="{{ route('contact') }}">contacting the team</a> early prevents small issues from becoming payment disputes.</p>
+<p>Advertisers launching new offers work with ConvertLane account managers to align IO terms with internal finance and legal requirements. Publishers receive the same terms in plain language within the platform, alongside creative assets and tracking links. When questions arise, whether on a borderline conversion or a cap override, <a href="{{ route('contact') }}">contacting the team</a> early prevents small issues from becoming payment disputes.</p>
 
 <h2>Frequently Asked Questions</h2>
 
@@ -195,12 +195,12 @@
 
 <h3>Do publishers earn less on CPA compared with CPS?</h3>
 
-<p>Not necessarily. CPA can be highly lucrative for publishers who excel at driving volume conversions efficiently, particularly when rates reflect the advertiser's true acquisition cost. CPS offers unlimited upside on high-value orders but introduces more variance. The better model depends on traffic type, audience intent, and operational capacity — not a universal hierarchy of payout types.</p>
+<p>Not necessarily. CPA can be highly lucrative for publishers who excel at driving volume conversions efficiently, particularly when rates reflect the advertiser's true acquisition cost. CPS offers unlimited upside on high-value orders but introduces more variance. The better model depends on traffic type, audience intent, and operational capacity, not a universal hierarchy of payout types.</p>
 
 <h2>Choosing the Model That Fits Your Funnel</h2>
 
-<p>CPA and CPS are not competing ideologies — they are tools for aligning incentives between advertisers who need measurable growth and publishers who invest in traffic and audience trust. CPA excels when the priority is scalable acquisition at a defined cost per qualified action. CPS excels when revenue and order value are the clearest signals of success. Hybrid structures, rigorous testing, thoughtful cap management, and transparent IO terms allow both sides to capture upside while controlling risk.</p>
+<p>CPA and CPS are not competing ideologies, they are tools for aligning incentives between advertisers who need measurable growth and publishers who invest in traffic and audience trust. CPA excels when the priority is scalable acquisition at a defined cost per qualified action. CPS excels when revenue and order value are the clearest signals of success. Hybrid structures, rigorous testing, thoughtful cap management, and transparent IO terms allow both sides to capture upside while controlling risk.</p>
 
-<p>Whether you are an advertiser designing your first performance offer or a publisher evaluating your next campaign, the payout model should reflect real funnel economics — not convention alone. ConvertLane supports both CPA and CPS programmes across finance, e-commerce, SaaS, and other verticals, with IO terms built for clarity and long-term partnership.</p>
+<p>Whether you are an advertiser designing your first performance offer or a publisher evaluating your next campaign, the payout model should reflect real funnel economics, not convention alone. ConvertLane supports both CPA and CPS programmes across finance, e-commerce, SaaS, and other verticals, with IO terms built for clarity and long-term partnership.</p>
 
 <p>Ready to launch or promote a performance campaign? <a href="{{ route('apply') }}">Apply for access</a> to ConvertLane and work with a team that understands how payout structure, compliance, and scale fit together from day one.</p>

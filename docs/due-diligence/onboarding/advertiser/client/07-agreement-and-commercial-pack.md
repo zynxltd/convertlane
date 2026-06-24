@@ -21,7 +21,7 @@ Following your approval (**{{partner_id}}**), please find below the commercial d
 
 | # | Document | Purpose |
 |---|----------|---------|
-| 1 | **Advertiser Agreement** | Master terms between {{legal_name}} and ConvertLane Ltd |
+| 1 | **Advertiser Agreement** | Master terms between {{legal_name}} and zynx Ltd |
 | 2 | **Insertion Order (IO)** | Per-offer: caps, geos, payout model, reversal window |
 | 3 | **Credit schedule** (if applicable) | Only if Finance approved credit — attaches to Agreement |
 | 4 | **Data Processing Agreement** | Only if tracking shares personal data |

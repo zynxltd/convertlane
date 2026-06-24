@@ -38,9 +38,9 @@
         <p style="{{ $text }}">We will review your application and contact you if we need anything further. You will hear from us within a few business days.</p>
         @if ($isAdvertiser)
             @if ($agreement->billing_model === 'prepay')
-            <p style="{{ $text }}"><strong>Billing selected:</strong> Prepay — we will send funding instructions before your campaign goes live.</p>
+            <p style="{{ $text }}"><strong>Billing selected:</strong> Prepay. We will send funding instructions before your campaign goes live.</p>
             @elseif ($agreement->billing_model === 'postpay')
-            <p style="{{ $text }}"><strong>Billing selected:</strong> Postpay — our team will confirm credit terms before traffic starts.</p>
+            <p style="{{ $text }}"><strong>Billing selected:</strong> Postpay. Our team will confirm credit terms before traffic starts.</p>
             @endif
             <p style="{{ $text }}">Once approved, you will receive offer IOs and Platform access.</p>
         @else

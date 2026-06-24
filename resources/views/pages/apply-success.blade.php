@@ -25,9 +25,9 @@
                     @endif
 
                     <ol class="mt-4 list-inside list-decimal space-y-2">
-                        <li><strong>Questionnaire</strong> — traffic, company, and compliance details.</li>
-                        <li><strong>Agreement</strong> — review terms pre-filled from your answers and sign digitally.</li>
-                        <li><strong>Approval</strong> — we review your pack and may request ID/KYB documents before go-live.</li>
+                        <li><strong>Questionnaire:</strong> traffic, company, and compliance details.</li>
+                        <li><strong>Agreement:</strong> review terms pre-filled from your answers and sign digitally.</li>
+                        <li><strong>Approval:</strong> we review your pack and may request ID/KYB documents before go-live.</li>
                     </ol>
 
                     <div class="mt-6 rounded-xl border border-brand-500/30 bg-brand-500/10 px-4 py-3 text-sm text-brand-800 dark:text-brand-200">

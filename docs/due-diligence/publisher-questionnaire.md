@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Issued by** | ConvertLane Ltd |
+| **Issued by** | zynx Ltd |
 | **Partner reference** | DD-P-________________ |
 | **Version** | 1.0 |
 | **Instructions** | Complete all sections in full. Attach to your due diligence pack. |

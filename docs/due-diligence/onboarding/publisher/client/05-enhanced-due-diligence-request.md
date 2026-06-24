@@ -15,4 +15,4 @@ Please provide by **{{edd_deadline_date}}**:
 Examples: extended traffic history, reference contacts, explanation of traffic source, certified documents, or live screen-share walkthrough.
 
 **{{compliance_lead_name}}**  
-Head of Compliance · ConvertLane Ltd
+Head of Compliance · zynx Ltd

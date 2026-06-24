@@ -13,7 +13,7 @@
 </p>
 
 <p>
-    An <strong>affiliate network</strong> aggregates publishers and advertisers on shared infrastructure. The network handles onboarding, tracking, reporting, and often compliance review. You pay for access to reach, operational support, and risk controls — typically via a network fee on top of publisher payouts.
+    An <strong>affiliate network</strong> aggregates publishers and advertisers on shared infrastructure. The network handles onboarding, tracking, reporting, and often compliance review. You pay for access to reach, operational support, and risk controls, typically via a network fee on top of publisher payouts.
 </p>
 
 <p>
@@ -57,7 +57,7 @@
 <h2>Publisher recruitment and reach</h2>
 
 <p>
-    In-house recruitment is a sales motion. Your team identifies content sites, comparison engines, influencers, email owners, and media buyers aligned with your vertical. Outreach, negotiation, and activation are manual — and competitive. Top publishers often prefer working through networks because consolidation simplifies invoicing and reduces admin.
+    In-house recruitment is a sales motion. Your team identifies content sites, comparison engines, influencers, email owners, and media buyers aligned with your vertical. Outreach, negotiation, and activation are manual, and competitive. Top publishers often prefer working through networks because consolidation simplifies invoicing and reduces admin.
 </p>
 
 <p>
@@ -65,13 +65,13 @@
 </p>
 
 <p>
-    For <a href="{{ route('publishers') }}">publishers</a>, networks reduce the number of advertiser relationships to manage. For <a href="{{ route('advertisers') }}">advertisers</a>, networks reduce the number of publisher contracts to maintain — at the cost of less direct relationship control.
+    For <a href="{{ route('publishers') }}">publishers</a>, networks reduce the number of advertiser relationships to manage. For <a href="{{ route('advertisers') }}">advertisers</a>, networks reduce the number of publisher contracts to maintain, at the cost of less direct relationship control.
 </p>
 
 <x-blog.figure
     src="/images/blog/strategy-network.jpg"
     alt="Affiliate managers and partners reviewing campaign performance in a meeting"
-    caption="Publisher recruitment is part relationship-building, part operational readiness — networks accelerate both when vetting is rigorous."
+    caption="Publisher recruitment is part relationship-building, part operational readiness, networks accelerate both when vetting is rigorous."
 />
 
 <h2>Account management headcount</h2>
@@ -81,18 +81,18 @@
 </p>
 
 <ul>
-    <li><strong>Affiliate manager(s)</strong> — publisher recruitment, optimisation, and communication</li>
-    <li><strong>Compliance / brand safety</strong> — creative review, traffic monitoring, policy enforcement</li>
-    <li><strong>Finance operations</strong> — invoicing, publisher payouts, reconciliation</li>
-    <li><strong>Technical support</strong> — tracking, postbacks, integration maintenance</li>
+    <li><strong>Affiliate manager(s)</strong>, publisher recruitment, optimisation, and communication</li>
+    <li><strong>Compliance / brand safety</strong>, creative review, traffic monitoring, policy enforcement</li>
+    <li><strong>Finance operations</strong>, invoicing, publisher payouts, reconciliation</li>
+    <li><strong>Technical support</strong>, tracking, postbacks, integration maintenance</li>
 </ul>
 
 <p>
-    A lean in-house team might run a small programme with one experienced AM plus shared legal and finance support. Scaling to dozens of active publishers usually demands dedicated headcount or agency support — often <strong>2–4 FTE</strong> before the programme feels properly managed.
+    A lean in-house team might run a small programme with one experienced AM plus shared legal and finance support. Scaling to dozens of active publishers usually demands dedicated headcount or agency support, often <strong>2–4 FTE</strong> before the programme feels properly managed.
 </p>
 
 <p>
-    Networks bundle much of this into their service layer. You still need an internal owner who understands offers, caps, and incrementality — but you are not building a full affiliate operations department from scratch.
+    Networks bundle much of this into their service layer. You still need an internal owner who understands offers, caps, and incrementality, but you are not building a full affiliate operations department from scratch.
 </p>
 
 <h2>Technology stack</h2>
@@ -102,7 +102,7 @@
 </p>
 
 <p>
-    Networks run centralised platforms — commonly Affise, Everflow, or proprietary systems — with shared reporting, publisher portals, and standardised conversion flows. You benefit from economies of scale but accept platform constraints.
+    Networks run centralised platforms, commonly Affise, Everflow, or proprietary systems, with shared reporting, publisher portals, and standardised conversion flows. You benefit from economies of scale but accept platform constraints.
 </p>
 
 <h3>What to evaluate in either model</h3>
@@ -145,7 +145,7 @@
 <h2>Compliance</h2>
 
 <p>
-    UK and EU advertisers face GDPR, ASA advertising standards, sector-specific rules (finance, health, iGaming), and increasing scrutiny of influencer and comparison-site disclosures. In-house programmes must build compliance into contracts, creative review workflows, and ongoing monitoring — or risk regulatory and reputational damage.
+    UK and EU advertisers face GDPR, ASA advertising standards, sector-specific rules (finance, health, iGaming), and increasing scrutiny of influencer and comparison-site disclosures. In-house programmes must build compliance into contracts, creative review workflows, and ongoing monitoring, or risk regulatory and reputational damage.
 </p>
 
 <p>
@@ -153,7 +153,7 @@
 </p>
 
 <p>
-    ConvertLane applies a <strong>vetting-first</strong> approach: partners are reviewed before receiving tracking links, and offers are configured from signed insertion orders — reducing the "sign up anyone" dynamic that plagues volume-focused networks.
+    ConvertLane applies a <strong>vetting-first</strong> approach: partners are reviewed before receiving tracking links, and offers are configured from signed insertion orders, reducing the "sign up anyone" dynamic that plagues volume-focused networks.
 </p>
 
 <h2>Fraud and quality control</h2>
@@ -163,7 +163,7 @@
 </p>
 
 <p>
-    Networks see fraud patterns across multiple advertisers, which can improve detection — if the network invests in quality rather than maximising sign-ups. Ask prospective partners:
+    Networks see fraud patterns across multiple advertisers, which can improve detection, if the network invests in quality rather than maximising sign-ups. Ask prospective partners:
 </p>
 
 <ul>
@@ -203,13 +203,13 @@
 </ul>
 
 <p>
-    Networks often win on <strong>speed to ROI</strong>. In-house often wins on <strong>long-run margin</strong> once volume, processes, and publisher relationships are mature — typically at sustained monthly spend thresholds that justify dedicated ops.
+    Networks often win on <strong>speed to ROI</strong>. In-house often wins on <strong>long-run margin</strong> once volume, processes, and publisher relationships are mature, typically at sustained monthly spend thresholds that justify dedicated ops.
 </p>
 
 <x-blog.figure
     src="/images/blog/strategy-network.jpg"
     alt="Partners discussing affiliate programme strategy and performance metrics"
-    caption="The cost conversation should include time to revenue and operational risk — not just network fees versus margin retained."
+    caption="The cost conversation should include time to revenue and operational risk, not just network fees versus margin retained."
 />
 
 <h2>When an in-house programme wins</h2>
@@ -247,7 +247,7 @@
 </ul>
 
 <p>
-    Early-stage brands, advertisers launching new verticals, and teams under pressure to show performance channel results within a quarter often start with a network — then reassess once data accumulates.
+    Early-stage brands, advertisers launching new verticals, and teams under pressure to show performance channel results within a quarter often start with a network, then reassess once data accumulates.
 </p>
 
 <h2>The hybrid approach</h2>
@@ -257,10 +257,10 @@
 </p>
 
 <ol>
-    <li><strong>Network pilot → in-house tier one</strong> — validate incrementality via a network, then bring top performers direct on improved terms</li>
-    <li><strong>Direct exclusives + network long tail</strong> — negotiate directly with flagship partners while the network supplies niche and experimental traffic</li>
-    <li><strong>Vertical split</strong> — in-house for core product lines, network for secondary offers or new markets</li>
-    <li><strong>Compliance segmentation</strong> — sensitive campaigns managed in-house; broader acquisition via vetted network inventory</li>
+    <li><strong>Network pilot → in-house tier one</strong>, validate incrementality via a network, then bring top performers direct on improved terms</li>
+    <li><strong>Direct exclusives + network long tail</strong>, negotiate directly with flagship partners while the network supplies niche and experimental traffic</li>
+    <li><strong>Vertical split</strong>, in-house for core product lines, network for secondary offers or new markets</li>
+    <li><strong>Compliance segmentation</strong>, sensitive campaigns managed in-house; broader acquisition via vetted network inventory</li>
 </ol>
 
 <p>
@@ -274,11 +274,11 @@
 </p>
 
 <p>
-    That model matters because the network versus in-house debate is not only about technology — it is about <strong>trust in the supply chain</strong>. A network that prioritises volume over vetting recreates the problems in-house teams try to avoid: junk traffic, compliance exposure, and publisher churn when payouts slip.
+    That model matters because the network versus in-house debate is not only about technology, it is about <strong>trust in the supply chain</strong>. A network that prioritises volume over vetting recreates the problems in-house teams try to avoid: junk traffic, compliance exposure, and publisher churn when payouts slip.
 </p>
 
 <p>
-    For advertisers, ConvertLane provides operational lift — tracking, publisher access, compliance workflows — while maintaining standards closer to a selective in-house programme. For publishers, it offers curated offers and reliable payment processes without managing dozens of separate advertiser relationships.
+    For advertisers, ConvertLane provides operational lift, tracking, publisher access, compliance workflows, while maintaining standards closer to a selective in-house programme. For publishers, it offers curated offers and reliable payment processes without managing dozens of separate advertiser relationships.
 </p>
 
 <p>
@@ -300,7 +300,7 @@
 </ul>
 
 <p>
-    If speed and operational support dominate, start with a vetted network. If margin, exclusivity, and direct control dominate — and you have the team to match — invest in in-house infrastructure. If both matter, plan a hybrid path from day one rather than treating the choice as permanent.
+    If speed and operational support dominate, start with a vetted network. If margin, exclusivity, and direct control dominate, and you have the team to match, invest in in-house infrastructure. If both matter, plan a hybrid path from day one rather than treating the choice as permanent.
 </p>
 
 <h2>Frequently asked questions</h2>
@@ -314,7 +314,7 @@
 <h3>Can I switch from a network to in-house later?</h3>
 
 <p>
-    Yes — many advertisers do, often bringing their best-performing publishers direct. Check network contracts for exclusivity and poaching clauses before planning migration.
+    Yes, many advertisers do, often bringing their best-performing publishers direct. Check network contracts for exclusivity and poaching clauses before planning migration.
 </p>
 
 <h3>Do networks own the publisher relationship?</h3>
@@ -326,7 +326,7 @@
 <h3>How do I measure incrementality in either model?</h3>
 
 <p>
-    Use holdout tests, geo splits, or paused-baseline comparisons where possible. Compare cohort LTV, not just front-end CPA. Both in-house and network programmes need the same discipline — the tracker is only as honest as your test design.
+    Use holdout tests, geo splits, or paused-baseline comparisons where possible. Compare cohort LTV, not just front-end CPA. Both in-house and network programmes need the same discipline, the tracker is only as honest as your test design.
 </p>
 
 <h3>What is the biggest mistake when choosing?</h3>
@@ -338,7 +338,7 @@
 <h3>Does ConvertLane support hybrid programmes?</h3>
 
 <p>
-    Many advertisers use ConvertLane alongside direct partnerships. We focus on vetted network delivery — tracking, compliance, and publisher access — while you retain freedom to structure your wider affiliate strategy as the channel matures.
+    Many advertisers use ConvertLane alongside direct partnerships. We focus on vetted network delivery, tracking, compliance, and publisher access, while you retain freedom to structure your wider affiliate strategy as the channel matures.
 </p>
 
 <div class="not-prose mt-12 rounded-2xl border border-slate-200 bg-slate-50 p-8 text-center dark:border-white/10 dark:bg-white/5">

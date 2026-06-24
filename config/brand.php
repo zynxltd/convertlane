@@ -5,28 +5,29 @@ use App\Support\BrandContact;
 return [
     'name' => 'ConvertLane',
     'logo' => '/images/convertlane-logo.png',
-    'legal_name' => 'ConvertLane Ltd',
+    'legal_name' => 'zynx Ltd',
+    'company_number' => '15822793',
     'tagline' => 'Scale What Converts',
     'descriptor' => 'Performance affiliate network',
     'signature' => 'Vetted partners. Payouts on schedule.',
-    'origin' => 'We review every partner before they get tracking links — no open sign-up wall, no mystery traffic. Advertisers get quality conversions; publishers get net-30 payouts reconciled to approved stats.',
+    'origin' => 'We review every partner before they get tracking links: no open sign-up wall, no mystery traffic. Advertisers get quality conversions; publishers get net-30 payouts reconciled to approved stats.',
     'description' => 'ConvertLane is a performance affiliate network connecting premium advertisers with vetted publishers. CPA, CPL, CPS, and hybrid deals across finance, iGaming, health, SaaS, and e-commerce.',
 
     'identity' => [
         'pillars' => [
             [
                 'title' => 'Reviewed before they track',
-                'description' => 'KYB/KYC, traffic proof, and sanctions checks on every application. No auto-approvals — incomplete files are closed after seven days.',
+                'description' => 'KYB/KYC, traffic proof, and sanctions checks on every application. No auto-approvals; incomplete files are closed after seven days.',
                 'icon' => 'lane',
             ],
             [
                 'title' => 'Offers set up by your AM',
-                'description' => 'Caps, postbacks, and creatives configured from your signed IO — not a self-serve panel where settings drift out of sync with what you agreed.',
+                'description' => 'Caps, postbacks, and creatives configured from your signed IO, not a self-serve panel where settings drift out of sync with what you agreed.',
                 'icon' => 'chart',
             ],
             [
                 'title' => 'Payouts matched to approved stats',
-                'description' => 'Net-30 on the 15th for the prior month. Finance reconciles each run against approved conversions — chargebacks and invalid events are deducted, not buried.',
+                'description' => 'Net-30 on the 15th for the prior month. Finance reconciles each run against approved conversions; chargebacks and invalid events are deducted, not buried.',
                 'icon' => 'shield',
             ],
         ],
@@ -64,7 +65,7 @@ return [
     'email' => BrandContact::email(),
     'support_email' => BrandContact::email(),
     'phone' => env('BRAND_PHONE', '+44 20 1234 5678'),
-    'address' => 'ConvertLane Ltd, United Kingdom',
+    'address' => '11 Brendon Close, Grantham, Lincolnshire, NG31 8FU, United Kingdom',
     'partner_panel_url' => env('PARTNER_PANEL_URL', 'https://convertlane.offer18.com'),
     'advertiser_panel_url' => env('ADVERTISER_PANEL_URL', 'https://convertlane.offer18.com/m'),
     'hero_background' => env('BRAND_HERO_BACKGROUND', '/images/hero/performance-analytics.jpg'),
@@ -101,7 +102,7 @@ return [
             'word' => 'Quality Conversions',
             'verb' => 'Drive',
             'eyebrow' => 'For advertisers',
-            'tagline' => 'Reviewed traffic partners — no open sign-up wall',
+            'tagline' => 'Reviewed traffic partners, no open sign-up wall',
         ],
         [
             'word' => 'Live Programmes',
@@ -122,7 +123,7 @@ return [
 
     'stats' => [
         ['value' => '6', 'label' => 'Core verticals'],
-        ['value' => '100+', 'label' => 'Offers'],
+        ['value' => '40+', 'label' => 'Offers'],
         ['value' => 'Net-30', 'label' => 'Payouts'],
     ],
     'verticals' => [

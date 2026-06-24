@@ -47,7 +47,13 @@
             </div>
         </div>
         <div class="mt-12 flex flex-col gap-4 border-t border-subtle-5 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>&copy; {{ date('Y') }} {{ config('brand.name') }}</p>
+            <div>
+                <p>&copy; {{ date('Y') }} {{ config('brand.name') }} (a trading name of {{ config('brand.legal_name') }})</p>
+                <p class="mt-1 text-xs">
+                    Company no. {{ config('brand.company_number') }} · Registered in {{ config('brand.registered') }} ·
+                    {{ config('brand.address') }}
+                </p>
+            </div>
             <a href="mailto:{{ config('brand.contact_email') }}" class="font-medium text-muted hover:text-brand-400">{{ config('brand.contact_email') }}</a>
         </div>
     </div>

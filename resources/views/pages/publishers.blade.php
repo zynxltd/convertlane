@@ -4,7 +4,7 @@
 >
     <x-page-hero eyebrow="For publishers">
         <x-slot:title>Monetise traffic with <span class="text-gradient-hero">premium offers</span></x-slot:title>
-        <x-slot:subtitle>Competitive payouts, reliable tracking, and an account manager who knows your vertical — not a generic inbox.</x-slot:subtitle>
+        <x-slot:subtitle>Competitive payouts, reliable tracking, and an account manager who knows your vertical, not a generic inbox.</x-slot:subtitle>
         <x-slot:actions>
             <a href="{{ route('offers') }}" class="btn-primary">Browse live offers</a>
             <a href="{{ route('apply') }}?type=publisher" class="btn-secondary">Apply as publisher</a>
@@ -20,7 +20,7 @@
     >
         <h2 class="section-heading mt-4">A network that pays on schedule</h2>
         <p class="section-sub">
-            We reconcile every payout run against approved conversion data. Invalid conversions and chargebacks are deducted transparently — not buried in a support ticket.
+            We reconcile every payout run against approved conversion data. Invalid conversions and chargebacks are deducted transparently, not buried in a support ticket.
         </p>
         <ul class="mt-8 space-y-3 text-left text-sm text-body">
             <li class="flex gap-3">
@@ -42,7 +42,7 @@
         <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
             <p class="eyebrow mx-auto">Publisher programme</p>
             <h2 class="section-heading mt-4">Built for affiliates who run real traffic</h2>
-            <p class="section-sub mx-auto">We work with SEO sites, paid media buyers, and email marketers who can prove their sources — and who want a network that pays on time.</p>
+            <p class="section-sub mx-auto">We work with SEO sites, paid media buyers, and email marketers who can prove their sources and want a network that pays on time.</p>
         </div>
     </section>
 
@@ -74,7 +74,7 @@
 
     <x-faq :items="[
         ['q' => 'What is the payment threshold?', 'a' => '£100 / $100 equivalent minimum. Payments processed net-30 on the 15th for the prior period.'],
-        ['q' => 'How are payouts made?', 'a' => 'Bank transfer to your nominated business account in GBP, EUR, or USD — details confirmed at onboarding.'],
+        ['q' => 'How are payouts made?', 'a' => 'Bank transfer to your nominated business account in GBP, EUR, or USD. Details are confirmed at onboarding.'],
         ['q' => 'Do you allow brand bidding?', 'a' => 'Offer-specific. Prohibited unless explicitly allowed in the IO.'],
     ]" />
 

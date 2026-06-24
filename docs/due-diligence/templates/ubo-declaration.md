@@ -28,4 +28,4 @@ I confirm:
 
 ---
 
-*ConvertLane Ltd — Confidential. Attach copies of government ID for each person listed.*
+*zynx Ltd — Confidential. Attach copies of government ID for each person listed.*

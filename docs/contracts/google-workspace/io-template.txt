@@ -1,6 +1,6 @@
 INSERTION ORDER (IO)
 
-ConvertLane Ltd · convertlane.co.uk
+zynx Ltd · convertlane.co.uk
 DRAFT — customise per offer. Solicitor review for regulated finance offers.
 
 
@@ -14,7 +14,7 @@ Expiry / review:    _______________________  (or “Until terminated”)
 
 PARTIES
 
-Network:            ConvertLane Ltd, United Kingdom
+Network:            zynx Ltd, United Kingdom
 Partner:            _________________________________________________
 Address:            _________________________________________________
 Company reg no.:    _________________________________________________
@@ -117,7 +117,7 @@ SIGNATURES
 
 By signing, both parties agree this IO is binding and incorporated into the master agreement.
 
-ConvertLane Ltd
+zynx Ltd
 Signature:  _________________________
 Name:       _________________________
 Title:      _________________________

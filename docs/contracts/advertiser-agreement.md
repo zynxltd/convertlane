@@ -1,13 +1,13 @@
 # Advertiser Agreement
 
-**ConvertLane Ltd** · convertlane.co.uk  
+**zynx Ltd** · convertlane.co.uk  
 **DRAFT — have a UK solicitor review before first live partner.**
 
 ---
 
 ## Parties
 
-**Network:** ConvertLane Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
+**Network:** zynx Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
 **Advertiser:** _________________________________________________  
 **Address:** _________________________________________________  
 **Company no.:** _________________________________________________  
@@ -136,7 +136,7 @@ Each party complies with UK GDPR. DPA signed separately if required.
 
 ## Signatures
 
-**ConvertLane Ltd**  
+**zynx Ltd**  
 Name: _________________________  
 Title: _________________________  
 Date: _________________________

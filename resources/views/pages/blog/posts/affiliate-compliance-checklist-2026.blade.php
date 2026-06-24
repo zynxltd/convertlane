@@ -6,7 +6,7 @@
 
 <p>Regulators on both sides of the Atlantic have sharpened their focus on digital advertising practices. The UK Advertising Standards Authority (ASA) continues to enforce the CAP Code against misleading claims, inadequate disclosures, and irresponsible targeting. The US Federal Trade Commission (FTC) expects clear and conspicuous affiliate disclosures across social posts, blogs, comparison sites, and paid search. Meanwhile, GDPR enforcement across the EU and UK GDPR in Britain mean that every pixel, cookie, and data-sharing arrangement must be defensible.</p>
 
-<p>Networks bear shared responsibility. ConvertLane monitors traffic quality, enforces IO terms, and maintains audit trails—but publishers remain directly accountable for how they promote offers, collect data, and represent advertiser brands. Advertisers, in turn, must supply accurate creative, permitted claims, and lawful data-processing instructions. Compliance is a three-way obligation: network, publisher, advertiser.</p>
+<p>Networks bear shared responsibility. ConvertLane monitors traffic quality, enforces IO terms, and maintains audit trails, but publishers remain directly accountable for how they promote offers, collect data, and represent advertiser brands. Advertisers, in turn, must supply accurate creative, permitted claims, and lawful data-processing instructions. Compliance is a three-way obligation: network, publisher, advertiser.</p>
 
 <h3>Quick readiness check</h3>
 
@@ -27,11 +27,11 @@
 <h3>GDPR checklist for publishers</h3>
 
 <ul>
-    <li>Identify every point where personal data is collected—forms, chat widgets, newsletter sign-ups, and post-click surveys.</li>
+    <li>Identify every point where personal data is collected, forms, chat widgets, newsletter sign-ups, and post-click surveys.</li>
     <li>Publish a privacy notice that names the data controller, purposes, retention periods, and data subject rights.</li>
     <li>Implement a consent management platform (CMP) or equivalent mechanism where cookies or similar technologies require consent.</li>
     <li>Ensure sub-processors (email tools, CRMs, heatmap vendors) are listed and governed by data processing agreements.</li>
-    <li>Honour access, erasure, and objection requests within statutory timeframes—typically one month.</li>
+    <li>Honour access, erasure, and objection requests within statutory timeframes, typically one month.</li>
     <li>Restrict data transfers outside the UK/EEA unless an appropriate safeguard applies (adequacy decision, Standard Contractual Clauses, etc.).</li>
     <li>Document your Record of Processing Activities if you qualify as a controller or joint controller.</li>
     <li>Train anyone with access to lead data on confidentiality and breach reporting procedures.</li>
@@ -40,12 +40,12 @@
 <x-blog.figure
     src="/images/blog/compliance.jpg"
     alt="Compliance reviewers examining affiliate campaign documentation and consent records"
-    caption="Document consent flows and data maps before scaling traffic—regulators ask for evidence, not intentions."
+    caption="Document consent flows and data maps before scaling traffic, regulators ask for evidence, not intentions."
 />
 
 <h2>ASA and FTC-style advertising disclosures</h2>
 
-<p>Consumers must understand when content is commercially motivated. The ASA requires marketing communications to be obviously identifiable as such. The FTC’s Endorsement Guides require disclosures that are hard to miss and hard to misunderstand—proximate to the affiliate link, in plain language, on every platform format including Stories, Reels, and short-form video.</p>
+<p>Consumers must understand when content is commercially motivated. The ASA requires marketing communications to be obviously identifiable as such. The FTC’s Endorsement Guides require disclosures that are hard to miss and hard to misunderstand, proximate to the affiliate link, in plain language, on every platform format including Stories, Reels, and short-form video.</p>
 
 <p>“#ad” alone may suffice on some platforms when placed prominently, but comparison articles, native-style editorials, and email campaigns need clearer labelling: “Advertisement”, “Paid partnership”, or “We earn a commission if you buy through our links.” Disclosures must appear in the same language as the promotion and must not be obscured by platform UI or colour contrast failures.</p>
 
@@ -56,13 +56,13 @@
     <li>Repeat disclosures in video and audio within the first few seconds, not only in descriptions.</li>
     <li>Avoid implying editorial independence when copy is dictated by payout incentives.</li>
     <li>Do not use ambiguous terms like “collab” or “spon” without context where the audience may not understand them.</li>
-    <li>Ensure influencers and sub-affiliates you recruit follow the same standards—vicarious liability is real.</li>
+    <li>Ensure influencers and sub-affiliates you recruit follow the same standards, vicarious liability is real.</li>
     <li>Keep screenshots of live posts with timestamps for your audit file.</li>
 </ul>
 
 <h2>Brand bidding and trademark use</h2>
 
-<p>Brand bidding—bidding on an advertiser’s trademark in paid search—is one of the most common compliance breaches in affiliate programmes. Unless an IO explicitly permits it, assume brand bidding is prohibited. This includes exact-match keywords, misspellings, and combined terms that create brand confusion.</p>
+<p>Brand bidding, bidding on an advertiser’s trademark in paid search, is one of the most common compliance breaches in affiliate programmes. Unless an IO explicitly permits it, assume brand bidding is prohibited. This includes exact-match keywords, misspellings, and combined terms that create brand confusion.</p>
 
 <p>Trademark use extends beyond search. Using an advertiser’s logo, product screenshots, or brand name in display ads, domain names, social handles, or app store listings without written permission can trigger immediate termination and legal action. Some finance and insurance advertisers impose stricter rules due to FCA-aligned marketing requirements.</p>
 
@@ -85,7 +85,7 @@
 
 <h2>Pre-landers, landing pages, and user journeys</h2>
 
-<p>Pre-landers—interstitial pages between the ad and the advertiser offer—are heavily scrutinised because they shape consumer expectations. A pre-lander must not mimic the advertiser’s official site, impersonate a government body, or use countdown timers and fake stock counters unless those claims are verifiable and permitted in the IO.</p>
+<p>Pre-landers, interstitial pages between the ad and the advertiser offer, are heavily scrutinised because they shape consumer expectations. A pre-lander must not mimic the advertiser’s official site, impersonate a government body, or use countdown timers and fake stock counters unless those claims are verifiable and permitted in the IO.</p>
 
 <p>Every step in the funnel should be transparent about what happens next: whether the user is submitting data to a broker, entering a prize draw, or being transferred to a third-party checkout. Pop-unders, forced redirects, auto-downloads, and malware-adjacent browser notifications are prohibited on reputable networks and will result in permanent bans.</p>
 
@@ -95,7 +95,7 @@
     <li>Use only IO-approved templates or submit new designs for compliance review before traffic goes live.</li>
     <li>Display the advertiser or product name clearly; do not imply official endorsement without authorisation.</li>
     <li>Ensure mobile layouts show disclosures and material terms without excessive scrolling.</li>
-    <li>Match geo-targeting to licensed territories—do not send UK users to unlicensed gambling or credit offers.</li>
+    <li>Match geo-targeting to licensed territories, do not send UK users to unlicensed gambling or credit offers.</li>
     <li>Test all tracking links after CMS or hosting changes; broken redirects waste spend and skew reporting.</li>
     <li>Remove outdated promotions promptly when offers pause or change payout terms.</li>
 </ul>
@@ -118,7 +118,7 @@
 
 <h2>Data quality, tracking integrity, and fraud prevention</h2>
 
-<p>Compliance is not only about what consumers see—it is also about how conversions are recorded. Cookie stuffing, click injection, forced clicks, incentivised traffic misrepresented as organic, and bot-driven form fills violate network policies and often criminal fraud statutes. Pixel placement must fire on the agreed thank-you or confirmation event, not on intermediate pages.</p>
+<p>Compliance is not only about what consumers see, it is also about how conversions are recorded. Cookie stuffing, click injection, forced clicks, incentivised traffic misrepresented as organic, and bot-driven form fills violate network policies and often criminal fraud statutes. Pixel placement must fire on the agreed thank-you or confirmation event, not on intermediate pages.</p>
 
 <p>Share only the minimum data required for attribution. Hash or pseudonymise identifiers where possible, and never sell raw lead data to unrelated third parties without explicit consent and contractual cover. Align postback fields with what the advertiser’s privacy notice describes.</p>
 
@@ -143,12 +143,12 @@
 
 <p>Networks reserve the right to suspend or terminate accounts that breach the <a href="{{ route('affiliate-agreement') }}">Affiliate Agreement</a>, IO terms, or applicable law. Suspension may be immediate where consumer harm, fraud, or regulatory risk is suspected. Publishers should understand clawback provisions: commissions on non-compliant or unvalidated conversions can be reversed.</p>
 
-<p>Remediation paths exist for good-faith operators who self-report issues early. Document your corrective actions—removed creatives, updated consent banners, negative keyword refreshes—and cooperate with investigations. Repeat violations, evasion using new accounts, or failure to respond to compliance notices typically lead to permanent removal from the network.</p>
+<p>Remediation paths exist for good-faith operators who self-report issues early. Document your corrective actions, removed creatives, updated consent banners, negative keyword refreshes, and cooperate with investigations. Repeat violations, evasion using new accounts, or failure to respond to compliance notices typically lead to permanent removal from the network.</p>
 
 <h3>Termination risk checklist</h3>
 
 <ul>
-    <li>Respond to compliance emails within the stated deadline—silence is treated as non-cooperation.</li>
+    <li>Respond to compliance emails within the stated deadline, silence is treated as non-cooperation.</li>
     <li>Pause affected campaigns immediately when notified of a potential breach.</li>
     <li>Preserve relevant logs and creatives until a matter is formally closed.</li>
     <li>Do not attempt to reapply under a new entity after termination for cause.</li>
@@ -187,12 +187,12 @@
     <li>Escalation path defined: who on your team contacts ConvertLane compliance and when.</li>
 </ul>
 
-<p>Operators who internalise these habits spend less time firefighting account warnings and more time scaling durable revenue. Compliance is not a blocker to performance—it is the foundation that keeps performance marketable to tier-one advertisers.</p>
+<p>Operators who internalise these habits spend less time firefighting account warnings and more time scaling durable revenue. Compliance is not a blocker to performance, it is the foundation that keeps performance marketable to tier-one advertisers.</p>
 
 <h2>Frequently asked questions</h2>
 
 <h3>Does GDPR apply if my business is outside the EU and UK?</h3>
-<p>Yes, if you process personal data of individuals located in the UK or EEA— for example, through UK-targeted campaigns or EU-hosted landing pages. Territorial scope follows the data subjects, not only your company registration. Review transfer mechanisms if data flows to countries without adequacy decisions.</p>
+<p>Yes, if you process personal data of individuals located in the UK or EEA,  for example, through UK-targeted campaigns or EU-hosted landing pages. Territorial scope follows the data subjects, not only your company registration. Review transfer mechanisms if data flows to countries without adequacy decisions.</p>
 
 <h3>Is “#affiliate” an acceptable disclosure under ASA rules?</h3>
 <p>Probably not on its own. The ASA expects labels that the average consumer understands. “Ad”, “Advertisement”, or explicit wording about commission earnings is safer. Context matters: a long-form review article needs clearer labelling than a short social post where “#ad” may suffice if prominently placed.</p>
@@ -211,7 +211,7 @@
 
 <div class="not-prose my-12 rounded-2xl border border-brand-500/20 bg-gradient-to-br from-brand-500/10 via-transparent to-accent-500/10 p-8 text-center dark:border-brand-400/20">
     <h2 class="text-2xl font-semibold tracking-tight text-heading">Run compliant campaigns on ConvertLane</h2>
-    <p class="mx-auto mt-3 max-w-xl text-sm text-muted">Join a performance network that treats compliance as a partnership discipline—not a checkbox. Vetted offers, clear IO terms, and responsive compliance support.</p>
+    <p class="mx-auto mt-3 max-w-xl text-sm text-muted">Join a performance network that treats compliance as a partnership discipline, not a checkbox. Vetted offers, clear IO terms, and responsive compliance support.</p>
     <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
         <a href="{{ route('apply') }}" class="btn-primary w-full sm:w-auto">Apply as a publisher</a>
         <a href="{{ route('contact') }}" class="btn-secondary w-full sm:w-auto">Speak to compliance</a>

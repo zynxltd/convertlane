@@ -10,12 +10,44 @@
 
 @php
     $brand = config('brand.name');
+    $legalName = config('brand.legal_name');
     $defaultDescription = config('brand.description');
-    $pageTitle = $title ? "{$title} | {$brand}" : "{$brand} — " . config('brand.descriptor');
+    $pageTitle = $title ? "{$title} | {$brand}" : "{$brand} | " . config('brand.descriptor');
     $metaDescription = $description ?? $defaultDescription;
     $canonicalUrl = $canonical ?? url()->current();
     $ogImage = $image ?? asset('images/og-default.jpg');
     $ogImageAlt = $imageAlt ?? $brand;
+
+    $orgSchema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'Organization',
+        'name' => $brand,
+        'legalName' => $legalName,
+        'url' => config('brand.url'),
+        'logo' => asset(ltrim(config('brand.logo', '/images/convertlane-logo.png'), '/')),
+        'description' => $defaultDescription,
+        'email' => config('brand.contact_email'),
+        'sameAs' => array_values(config('brand.social')),
+    ];
+
+    if (filled(config('brand.company_number'))) {
+        $orgSchema['identifier'] = [
+            '@type' => 'PropertyValue',
+            'propertyID' => 'Companies House',
+            'value' => config('brand.company_number'),
+        ];
+    }
+
+    if (filled(config('brand.address'))) {
+        $orgSchema['address'] = [
+            '@type' => 'PostalAddress',
+            'streetAddress' => '11 Brendon Close',
+            'addressLocality' => 'Grantham',
+            'addressRegion' => 'Lincolnshire',
+            'postalCode' => 'NG31 8FU',
+            'addressCountry' => 'GB',
+        ];
+    }
 @endphp
 
 <title>{{ $pageTitle }}</title>
@@ -42,14 +74,5 @@
 <link rel="apple-touch-icon" href="{{ config('brand.logo', '/images/convertlane-logo.png') }}">
 
 <script type="application/ld+json">
-{!! json_encode([
-    '@context' => 'https://schema.org',
-    '@type' => 'Organization',
-    'name' => $brand,
-    'url' => config('brand.url'),
-    'logo' => asset(ltrim(config('brand.logo', '/images/convertlane-logo.png'), '/')),
-    'description' => $defaultDescription,
-    'email' => config('brand.contact_email'),
-    'sameAs' => array_values(config('brand.social')),
-], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+{!! json_encode($orgSchema, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
 </script>

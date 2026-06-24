@@ -1,6 +1,7 @@
 # ConvertLane — Company documentation
 
-**Legal entity:** ConvertLane Ltd (England & Wales)  
+**Legal entity:** zynx Ltd (company no. 15822793, England & Wales)  
+**Trading name:** ConvertLane  
 **Purpose:** Run a small, compliant performance affiliate network without bureaucracy overload.
 
 > **Disclaimer:** These documents are operational templates. Have a UK solicitor review before signing with partners or regulators in your verticals (especially finance and iGaming).

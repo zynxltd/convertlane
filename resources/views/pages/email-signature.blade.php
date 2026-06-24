@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow">
-    <title>Email signature — {{ config('brand.name') }}</title>
+    <title>Email signature | {{ config('brand.name') }}</title>
     <style>
         * { box-sizing: border-box; }
         body {
@@ -81,7 +81,7 @@
                 </tr>
                 <tr>
                     <td style="color: #64748b; padding-bottom: 10px;">
-                        {{ $role }} · {{ config('brand.legal_name') }}
+                        {{ $role }} · {{ config('brand.name') }} ({{ config('brand.legal_name') }})
                     </td>
                 </tr>
                 <tr>

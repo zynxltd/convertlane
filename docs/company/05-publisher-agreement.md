@@ -6,7 +6,7 @@
 
 ## Parties
 
-**Network:** ConvertLane Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
+**Network:** zynx Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
 **Publisher:** [Legal entity name], [Address], company no. [____] (“**Publisher**”, “**you**”, “**Affiliate**”)
 
 **Effective date:** [____] · **Agreement ID:** CL-PUB-[____]
@@ -122,7 +122,7 @@ You indemnify ConvertLane against claims arising from your traffic, creatives, d
 
 ## Signatures
 
-**ConvertLane Ltd**  
+**zynx Ltd**  
 Name: _________________________  
 Title: _________________________  
 Date: _________________________

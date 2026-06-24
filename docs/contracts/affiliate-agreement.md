@@ -1,13 +1,13 @@
 # Affiliate / Publisher Agreement
 
-**ConvertLane Ltd** · convertlane.co.uk  
+**zynx Ltd** · convertlane.co.uk  
 **DRAFT — have a UK solicitor review before first live partner.**
 
 ---
 
 ## Parties
 
-**Network:** ConvertLane Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
+**Network:** zynx Ltd, United Kingdom (“**ConvertLane**”, “**we**”, “**us**”)  
 **Affiliate:** _________________________________________________  
 **Address:** _________________________________________________  
 **Company no.:** _________________________________________________  
@@ -130,7 +130,7 @@ You indemnify ConvertLane against claims arising from your traffic, creatives, d
 
 ## Signatures
 
-**ConvertLane Ltd**  
+**zynx Ltd**  
 Name: _________________________  
 Title: _________________________  
 Date: _________________________

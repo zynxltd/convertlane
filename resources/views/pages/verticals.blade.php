@@ -1,7 +1,7 @@
 <x-layouts.app title="Verticals" description="Explore ConvertLane affiliate offers across finance, iGaming, health, SaaS, e-commerce, and dating verticals.">
     <x-page-hero eyebrow="Verticals">
         <x-slot:title>Specialist teams per <span class="text-gradient-hero">industry</span></x-slot:title>
-        <x-slot:subtitle>Compliance workflows and publisher recruitment tailored to each vertical — not one-size-fits-all.</x-slot:subtitle>
+        <x-slot:subtitle>Compliance workflows and publisher recruitment tailored to each vertical, not one-size-fits-all.</x-slot:subtitle>
     </x-page-hero>
 
     <section class="py-16 lg:py-24">

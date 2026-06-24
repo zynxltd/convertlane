@@ -37,7 +37,7 @@
                     <p class="eyebrow mx-auto">Members only</p>
                     <p class="mt-4 font-display text-2xl font-semibold text-heading">Join the network to see live offers</p>
                     <p class="mt-3 text-sm text-muted leading-relaxed">
-                        The full catalogue is visible once your partner application is approved. Every programme is configured from a signed IO — not a public self-serve list.
+                        The full catalogue is visible once your partner application is approved. Every programme is configured from a signed IO, not a public self-serve list.
                     </p>
                     <div class="mt-8 flex justify-center">
                         <a href="{{ route('apply') }}" class="btn-primary">Join Network</a>

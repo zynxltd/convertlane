@@ -7,7 +7,7 @@
 <x-page-hero eyebrow="Legal">
     <x-slot:title>{{ $title }}</x-slot:title>
     <x-slot:subtitle>
-        {{ $summary ?? config('brand.legal_name') . ' · Governed by the laws of ' . config('legal.jurisdiction') }}
+        {{ $summary ?? config('brand.legal_name') . ' (trading as ' . config('brand.name') . ') · Governed by the laws of ' . config('legal.jurisdiction') }}
     </x-slot:subtitle>
 </x-page-hero>
 

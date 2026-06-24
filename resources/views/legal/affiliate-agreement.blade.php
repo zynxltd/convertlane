@@ -13,7 +13,7 @@
     >
         <p>
             This Publisher / Affiliate Agreement (“<strong>Agreement</strong>”) is between
-            <strong>{{ $legalName }}</strong> (“{{ $brand }}”, “Network”, “we”, “us”) and the legal entity applying or
+            <strong>{{ $legalName }}</strong> (trading as “<strong>{{ $brand }}</strong>”, “Network”, “we”, “us”) and the legal entity applying or
             approved as a publisher (“Publisher”, “Affiliate”, “you”).
         </p>
         <p>

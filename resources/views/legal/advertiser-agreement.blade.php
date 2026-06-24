@@ -13,7 +13,7 @@
     >
         <p>
             This Advertiser Agreement (“<strong>Agreement</strong>”) is between
-            <strong>{{ $legalName }}</strong> (“{{ $brand }}”, “Network”, “we”, “us”) and the legal entity applying or
+            <strong>{{ $legalName }}</strong> (trading as “<strong>{{ $brand }}</strong>”, “Network”, “we”, “us”) and the legal entity applying or
             approved as an advertiser (“Advertiser”, “you”).
         </p>
         <p>

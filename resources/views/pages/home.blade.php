@@ -35,7 +35,7 @@
                 @foreach ([
                     ['title' => 'Apply & get approved', 'desc' => 'We verify your business, traffic or product fit, and compliance requirements. Most reviews complete in 5–10 business days.', 'step' => '01'],
                     ['title' => 'Go live with support', 'desc' => 'Your account manager configures tracking, caps, and creatives so your programme runs exactly as agreed.', 'step' => '02'],
-                    ['title' => 'Get paid on schedule', 'desc' => 'Net-30 payouts on the 15th, reconciled to approved performance — no surprises at month-end.', 'step' => '03'],
+                    ['title' => 'Get paid on schedule', 'desc' => 'Net-30 payouts on the 15th, reconciled to approved performance, with no surprises at month-end.', 'step' => '03'],
                 ] as $item)
                     <article class="rounded-2xl border border-subtle bg-elevated p-8 shadow-lg">
                         <span class="font-mono text-sm font-bold text-brand-500">{{ $item['step'] }}</span>
@@ -53,7 +53,7 @@
                 <p class="eyebrow mx-auto">Account management</p>
                 <h2 class="section-heading mt-4">Hands-on support from onboarding to payout</h2>
                 <p class="section-sub mx-auto">
-                    Every advertiser and publisher account is managed by a dedicated team — offer setup, performance reviews, and escalations handled in one place.
+                    Every advertiser and publisher account is managed by a dedicated team that handles offer setup, performance reviews, and escalations in one place.
                 </p>
             </div>
             <div class="mt-14 grid gap-6 md:grid-cols-3">
@@ -65,7 +65,7 @@
                     ],
                     [
                         'title' => 'Performance reviews',
-                        'desc' => 'Scheduled check-ins on clicks, conversions, EPC, and quality — so you know what is working before month-end.',
+                        'desc' => 'Scheduled check-ins on clicks, conversions, EPC, and quality, so you know what is working before month-end.',
                         'icon' => 'chart',
                     ],
                     [
@@ -98,7 +98,7 @@
                 <div>
                     <p class="eyebrow">Verticals</p>
                     <h2 class="section-heading mt-4">Where we operate</h2>
-                    <p class="section-sub">Specialist teams per vertical — not generalists guessing at compliance.</p>
+                    <p class="section-sub">Specialist teams per vertical, not generalists guessing at compliance.</p>
                 </div>
                 <a href="{{ route('offers') }}" class="inline-flex items-center gap-1 text-sm font-semibold text-brand-400 hover:text-brand-300">
                     Browse live offers
@@ -129,7 +129,7 @@
     <x-faq :items="[
         ['q' => 'How is performance tracked?', 'a' => 'We use a dedicated tracking and reporting setup for clicks, conversions, and caps. Publishers receive panel access only after compliance approval and a signed IO.'],
         ['q' => 'How fast are payouts?', 'a' => 'Net-30 on the 15th for the prior month. Minimum threshold £100 / $100 equivalent.'],
-        ['q' => 'Which traffic types do you accept?', 'a' => 'SEO, content, email (opt-in), social, native, and paid — per offer IO. Incentivised and brand bidding require explicit approval.'],
+        ['q' => 'Which traffic types do you accept?', 'a' => 'SEO, content, email (opt-in), social, native, and paid, per offer IO. Incentivised and brand bidding require explicit approval.'],
         ['q' => 'How long does onboarding take?', 'a' => '5–10 business days once your document pack is complete. Incomplete applications are closed after 7 days.'],
     ]" />
 

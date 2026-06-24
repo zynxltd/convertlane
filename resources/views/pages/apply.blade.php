@@ -1,6 +1,6 @@
 <x-layouts.app
     title="Apply to Join the Network"
-    description="Apply to join ConvertLane as a publisher or advertiser. Sole traders, individuals, and companies welcome — reviewed within 3 business days."
+    description="Apply to join ConvertLane as a publisher or advertiser. Sole traders, individuals, and companies welcome, reviewed within 3 business days."
     :canonical="route('apply')"
 >
     <x-page-hero eyebrow="Apply">

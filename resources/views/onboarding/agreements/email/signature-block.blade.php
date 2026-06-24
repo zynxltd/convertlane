@@ -32,7 +32,7 @@
             <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
                 <tr>
                     <td width="50%" valign="top" style="padding-right: 16px;">
-                        <p style="{{ $label }} font-weight: 700;">{{ $legalName }}</p>
+                        <p style="{{ $label }} font-weight: 700;">{{ $legalName }} (trading as {{ config('brand.name') }})</p>
                         <p style="{{ $muted }} text-transform: uppercase; font-size: 11px; letter-spacing: 0.04em;">Authorised signatory</p>
                         <p style="{{ $muted }} margin-top: 20px; border-bottom: 1px solid #cbd5e1; padding-bottom: 8px;">Pending countersignature</p>
                         <p style="{{ $text }}">Name: —</p>

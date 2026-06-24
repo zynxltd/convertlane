@@ -1,7 +1,7 @@
 <x-layouts.app title="Contact" description="Contact ConvertLane partnerships, compliance, or billing. We respond within one business day.">
     <x-page-hero eyebrow="Contact">
         <x-slot:title>Get in <span class="text-gradient-hero">touch</span></x-slot:title>
-        <x-slot:subtitle>Partnerships, compliance, or billing — we're here to help.</x-slot:subtitle>
+        <x-slot:subtitle>Partnerships, compliance, or billing: we're here to help.</x-slot:subtitle>
     </x-page-hero>
 
     <section class="py-16 lg:py-24">
@@ -14,7 +14,15 @@
                             <dd><a href="mailto:{{ config('brand.contact_email') }}" class="text-brand-400">{{ config('brand.contact_email') }}</a></dd>
                         </div>
                         <div>
-                            <dt class="font-semibold text-slate-500">Address</dt>
+                            <dt class="font-semibold text-slate-500">Legal entity</dt>
+                            <dd class="text-muted">{{ config('brand.legal_name') }} (company no. {{ config('brand.company_number') }})</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold text-slate-500">Trading name</dt>
+                            <dd class="text-muted">{{ config('brand.name') }}</dd>
+                        </div>
+                        <div>
+                            <dt class="font-semibold text-slate-500">Registered office</dt>
                             <dd class="text-muted">{{ config('brand.address') }}</dd>
                         </div>
                     </dl>

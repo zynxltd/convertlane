@@ -42,5 +42,5 @@ Enhanced due diligence may take up to **10 business days** after we receive a co
 Kind regards,
 
 **{{compliance_lead_name}}**  
-Head of Compliance · ConvertLane Ltd  
+Head of Compliance · zynx Ltd  
 compliance@convertlane.co.uk

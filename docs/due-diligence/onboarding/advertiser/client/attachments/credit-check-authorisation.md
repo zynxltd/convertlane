@@ -1,6 +1,6 @@
 # Credit check authorisation (Advertiser)
 
-**ConvertLane Ltd** · United Kingdom  
+**zynx Ltd** · United Kingdom  
 **Partner reference:** _________________________
 
 ---
@@ -18,7 +18,7 @@
 
 ## Authorisation
 
-The undersigned, being duly authorised to act for the company named above, hereby authorises **ConvertLane Ltd** and its appointed third-party providers (including business credit reference agencies such as Creditsafe, Experian Business, or Dun & Bradstreet) to:
+The undersigned, being duly authorised to act for the company named above, hereby authorises **zynx Ltd** and its appointed third-party providers (including business credit reference agencies such as Creditsafe, Experian Business, or Dun & Bradstreet) to:
 
 1. Obtain business credit information and related reports on the company;  
 2. Use such information solely for **partner due diligence, credit assessment, and ongoing monitoring**;  

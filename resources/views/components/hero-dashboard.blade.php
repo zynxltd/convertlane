@@ -29,7 +29,7 @@
         </div>
 
         <div class="border-t border-slate-200/80 px-4 py-4 dark:border-white/10">
-            <p class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Performance — last 12 periods</p>
+            <p class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Performance, last 12 periods</p>
             <div class="mt-4 flex h-32 items-end justify-between gap-1 sm:h-36 sm:gap-1.5">
                 @foreach ($bars as $i => $h)
                     <div

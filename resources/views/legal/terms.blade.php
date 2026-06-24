@@ -15,7 +15,7 @@
         <p>
             These Terms of Service (“<strong>Terms</strong>”) govern access to and use of the website at
             <a href="{{ $url }}">{{ $url }}</a> and related services operated by
-            <strong>{{ $legalName }}</strong> (“{{ $brand }}”, “we”, “us”). By using the website or submitting an
+            <strong>{{ $legalName }}</strong> (trading as “<strong>{{ $brand }}</strong>”, “we”, “us”). By using the website or submitting an
             application, you agree to these Terms.
         </p>
         <p>
@@ -27,11 +27,11 @@
 
         <h2>1. Definitions</h2>
         <ul>
-            <li><strong>Advertiser</strong> — a brand or agency promoting offers through the network.</li>
-            <li><strong>Publisher / Affiliate</strong> — a partner promoting approved offers for commission.</li>
-            <li><strong>IO</strong> — insertion order or offer schedule setting commercial and technical terms.</li>
-            <li><strong>Partner</strong> — any approved advertiser or publisher.</li>
-            <li><strong>Platform</strong> — our tracking, reporting, and partner management systems.</li>
+            <li><strong>Advertiser:</strong> a brand or agency promoting offers through the network.</li>
+            <li><strong>Publisher / Affiliate:</strong> a partner promoting approved offers for commission.</li>
+            <li><strong>IO:</strong> insertion order or offer schedule setting commercial and technical terms.</li>
+            <li><strong>Partner:</strong> any approved advertiser or publisher.</li>
+            <li><strong>Platform:</strong> our tracking, reporting, and partner management systems.</li>
         </ul>
 
         <h2>2. Eligibility</h2>
@@ -156,6 +156,7 @@
         </p>
 
         <h2>15. Contact</h2>
+        <x-legal.company-details />
         <p>
             Questions about these Terms:
             <a href="mailto:{{ config('legal.legal_email') }}">{{ config('legal.legal_email') }}</a>.

@@ -31,7 +31,7 @@ Your Insertion Order **{{io_reference}}** is ready for activation. Before we ena
 
 **Amount:** {{currency}} {{amount_due}}  
 **Reference (mandatory):** `{{partner_id}}-{{offer_id}}`  
-**Beneficiary:** ConvertLane Ltd  
+**Beneficiary:** zynx Ltd  
 **Bank / Wise details:** {{bank_details_block}}
 
 Funds must be **cleared** before caps are enabled. Allow **1–2 business days** for international wires.

@@ -4,7 +4,7 @@
 
 **Date:** [____]
 
-**ConvertLane Ltd** and **[Company]** (“Parties”) wish to share confidential information about a potential affiliate network partnership.
+**zynx Ltd** and **[Company]** (“Parties”) wish to share confidential information about a potential affiliate network partnership.
 
 1. **Confidential information** means non-public business, financial, technical, and offer data marked confidential or reasonably understood as confidential.
 
@@ -20,5 +20,5 @@
 
 7. **Governing law:** England and Wales.
 
-**ConvertLane Ltd** _________________ Date _______  
+**zynx Ltd** _________________ Date _______  
 **[Company]** _________________ Date _______

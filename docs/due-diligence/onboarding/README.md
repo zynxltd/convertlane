@@ -1,7 +1,7 @@
 # Partner onboarding — document pack (by stage)
 
 **Version:** 1.0 · **For review:** ConvertLane internal  
-**Legal entity:** ConvertLane Ltd · United Kingdom
+**Legal entity:** zynx Ltd · United Kingdom
 
 This folder contains **two copies of every stage**:
 

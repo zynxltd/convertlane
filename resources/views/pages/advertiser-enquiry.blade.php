@@ -5,7 +5,7 @@
 >
     <x-page-hero eyebrow="Advertisers">
         <x-slot:title>Launch an <span class="text-gradient-hero">offer</span></x-slot:title>
-        <x-slot:subtitle>Tell us about your brand, vertical, and goals — we will follow up with next steps and IO requirements.</x-slot:subtitle>
+        <x-slot:subtitle>Tell us about your brand, vertical, and goals. We will follow up with next steps and IO requirements.</x-slot:subtitle>
     </x-page-hero>
 
     <section class="py-16 lg:py-24">

@@ -17,7 +17,7 @@
 
 ## Parties
 
-**Network:** ConvertLane Ltd, United Kingdom  
+**Network:** zynx Ltd, United Kingdom  
 **Partner:** [Company name], [Address], Reg no. [____]  
 **Partner type:** ☐ Publisher / Affiliate ☐ Advertiser  
 
@@ -125,7 +125,7 @@ Master agreement ref: CL-PUB-[____] or CL-ADV-[____]
 
 By signing, parties agree this IO is binding and incorporated into the master agreement.
 
-**ConvertLane Ltd**  
+**zynx Ltd**  
 Signature: _________________________ Name: _________________________ Date: _________
 
 **Partner**  

@@ -13,7 +13,7 @@
         summary="How we handle personal data for website visitors, applicants, and approved network partners."
     >
         <p>
-            This Privacy Policy explains how <strong>{{ $legalName }}</strong> (“{{ $brand }}”, “we”, “us”, “our”)
+            This Privacy Policy explains how <strong>{{ $legalName }}</strong> (trading as “<strong>{{ $brand }}</strong>”, “we”, “us”, “our”)
             processes personal data when you visit <a href="{{ $url }}">{{ $url }}</a>, apply to join our performance
             affiliate network, or operate as an approved advertiser or publisher.
         </p>
@@ -24,9 +24,7 @@
         </p>
 
         <h2>1. Who is responsible for your data?</h2>
-        <p>
-            <strong>Data controller:</strong> {{ $legalName }}, registered in {{ config('brand.registered') }}.
-        </p>
+        <x-legal.company-details />
         <p>
             <strong>Contact:</strong>
             <a href="mailto:{{ config('legal.privacy_email') }}">{{ config('legal.privacy_email') }}</a>
@@ -113,11 +111,11 @@
         <h2>4. Who we share data with</h2>
         <p>We share personal data only where necessary and under appropriate safeguards:</p>
         <ul>
-            <li><strong>Advertisers and publishers</strong> — as required to operate programmes (for example, conversion validation, quality review, or payment reconciliation).</li>
-            <li><strong>Tracking and infrastructure providers</strong> — hosting, CDN, email, and affiliate tracking platforms that process data on our instructions.</li>
-            <li><strong>Payment processors</strong> — to execute publisher payouts and receive advertiser funds.</li>
-            <li><strong>Professional advisers</strong> — lawyers, accountants, and auditors bound by confidentiality.</li>
-            <li><strong>Regulators and law enforcement</strong> — where required by law or to protect our legal rights.</li>
+            <li><strong>Advertisers and publishers:</strong> as required to operate programmes (for example, conversion validation, quality review, or payment reconciliation).</li>
+            <li><strong>Tracking and infrastructure providers:</strong> hosting, CDN, email, and affiliate tracking platforms that process data on our instructions.</li>
+            <li><strong>Payment processors:</strong> to execute publisher payouts and receive advertiser funds.</li>
+            <li><strong>Professional advisers:</strong> lawyers, accountants, and auditors bound by confidentiality.</li>
+            <li><strong>Regulators and law enforcement:</strong> where required by law or to protect our legal rights.</li>
         </ul>
         <p>We do <strong>not</strong> sell personal data.</p>
 
